@@ -1,0 +1,315 @@
+.header {
+    height: 80px;
+    background: $mainColor;
+
+    .container-fluid {
+        &.open {
+            .logo {
+                &.blue {
+                    display: none;
+                }
+
+                &.white {
+                    display: block;
+                }
+            }
+        }
+    }
+
+    &.transparent {
+    	background: transparent;
+    	position: absolute;
+    	width: 100%;
+    	z-index: 3;
+
+        .burger {
+            span {
+                background: $mainColor;
+            }
+        }
+
+        .nav {
+            li {
+                a {
+                    color: $homeHeader;
+
+                    @media (max-width: $tabletBreakpoint) {
+                        color: #fff;
+                    }
+                }
+            }
+        }
+
+        @media (max-width: $tabletBreakpoint) {
+            background: $lightGrey;
+            position: inherit;
+        }
+
+         .logo {
+         	&.blue {
+         		display: block;
+         		float: left;
+
+                @media (max-width: $tabletBreakpoint) {
+                    // display: none;
+                }
+         	}
+
+         	&.white {
+         		display: none;
+
+                @media (max-width: $tabletBreakpoint) {
+                    // display: block;
+                }
+         	}
+         }
+    }
+
+    .logo {
+	    width: 160px;
+    	padding: 20px;
+    	margin-top: 5px;
+    	margin-left: 3%;
+
+        @media (max-width: $tabletBreakpoint) {
+            position: relative;
+            z-index: 5;
+            margin-left: 0;
+            float: left;
+        }
+
+    	&.blue {
+    		display: none;
+    	}
+    }
+
+    .nav {
+	    height: 100%;
+	    display: flex;
+	    width: auto;
+	    float: right;
+	    justify-content: flex-end;
+	    margin-top: 20px;
+	    color: #fff;
+	    padding-right: 20px;
+
+        @media (max-width: $tabletBreakpoint) {
+            width: 0%;
+            height: 100vh;
+            position: absolute;
+            background: $mainColor;
+            z-index: 4;
+            right: 0;
+            margin-top: 0;
+            justify-content: center;
+            align-items: flex-start;
+            flex-direction: column;
+            padding-right: 0;
+            transition: all 0.2s $firstBezier;
+        }
+
+        &.open {
+            width: 100%;
+            position: fixed;
+
+            @media (max-width: $tabletBreakpoint) {
+                padding-top: 15%;
+            }
+
+            li {
+                opacity: 1;
+            }
+        }
+
+	    li {
+    	    padding-left: 5px;
+    		padding-right: 5px;
+
+            &:hover {
+                .undernav__menu {
+                    opacity: 1;
+                    z-index: 1;
+                }
+            }
+
+            @media (max-width: $tabletBreakpoint) {
+                opacity: 0;
+                transition: all 0.2s $firstBezier;
+                padding-left: 20px;
+            }
+
+	    	a {
+	    		color: #fff;
+	    		font-family: $poppinsLight;
+	    		text-transform: capitalize;
+	    		font-size: 14px;
+
+                @media (max-width: $tabletBreakpoint) { 
+                    font-size: 20px;
+                }
+
+	    		&:hover {
+	    			background: none;
+	    		}
+
+	    		&:active {
+	    			background: none;
+	    		}
+
+	    		&:focus {
+	    			background: none;
+	    		}
+	    	}
+	    }
+    }
+}
+
+
+.burger {
+    width: 40px;
+    height: 40px;
+    float: right;
+    z-index: 12;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    top: 10px;
+    display: none;
+    margin: 13px;
+    transition: all 0.2s cubic-bezier(0, .46, 1, .71);
+
+    @media (max-width: $tabletBreakpoint) {
+        display: block;
+    }
+
+    &.open {
+
+        position: fixed;
+        right: 13px;
+
+        span {
+            background: #fff !important;
+
+            &:nth-child(1) {
+                width: 70%;
+            }
+
+            &:nth-child(2) {
+                width: 80%;
+            }
+
+            &:nth-child(3) {
+                width: 85%;
+            }
+        }
+    }
+
+    span {
+        height: 4px;
+        background: #fff;
+        display: block;
+        border-radius: 5px;
+        float: right;
+        margin-top: 4px;
+        transition: all 0.2s cubic-bezier(0, .46, 1, .71);
+
+        &:nth-child(1) {
+            width: 90%;
+        }
+
+        &:nth-child(2) {
+            width: 70%;
+        }
+
+         &:nth-child(3) {
+            width: 80%;
+        }
+    }
+}
+
+// UNDERNAV
+
+.undernav__menu {
+    list-style: none;
+    position: absolute;
+    padding-left: 15px;
+    width: 100%;
+    background: $mainColor;
+    opacity: 0;
+    z-index: -1;
+    transition: all 0.2s $firstBezier;
+
+    @media (max-width: $tabletBreakpoint) {
+        position: relative;
+        opacity: 1;
+        z-index: 1;
+    }
+
+    li {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        color: #fff;
+
+        a {
+            color: #fff;
+
+            @media (max-width: $tabletBreakpoint) { 
+                font-size: 18px !important;
+            }
+        }
+    }
+}
+
+.undernav__link {
+    color: #fff !important;
+
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+.lang__button {
+    border-radius: 100%;
+    width: 30px;
+    height: 30px;
+    border: none;
+    margin-right: 5px;
+    margin-left: 5px;
+    font-size: 10px;
+    background: $mainColor;
+    font-size: 11px;
+    margin-top: 3px;
+    text-transform: uppercase;
+
+    &.active {
+        background: #fff;
+        color: $mainColor;
+        border: 1px solid $mainColor;
+    }
+}
+
+.lang__holder {
+    margin-top: 4px;
+
+    button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        float: left;
+    }
+
+    @media (max-width: $tabletBreakpoint) {
+        width: 100%;
+        box-sizing: border-box;
+        padding-top: 50px;
+        padding-left: 25px;
+
+        button {
+            font-size: 13px;
+            text-align: center;
+            float: left;
+        }
+    }
+}

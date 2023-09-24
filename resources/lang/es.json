@@ -1,0 +1,61 @@
+{
+	"home_section1": {
+		"case_studies": "Estudios de Caso",
+		"request": "Solicitar Una Hoja De Datos"
+	},
+	"contact": "Contactar",
+	"tab_section": {
+		"first": {
+			"title": "Estudios de case",
+			"sub_title": "Network"
+		},
+		"second": {
+			"title": "Estudios de case",
+			"sub_title": "Médico"
+		},
+		"third": {
+			"title": "Estudios de case",
+			"sub_title": "Cine"	
+		}
+	},
+	"clients": {
+		"partners": "Socios comerciales y técnicos::",
+		"our_clients": "Nuestros clientes",
+		"under_title": "Haga clic en el logotipo de nuestro cliente para ver cómo nuestro producto los ayudó."
+	},
+	"about": {
+		"team": {
+			"managment": "El equipo de gestión"
+		}
+	},
+	"casestudy": {
+		"distribute": {
+			"title": "¿Quieres distribuir nuestro producto?",
+			"description": "Si desea distribuir nuestro producto o asociarse con nosotros, lo mejor que puede hacer es contactarnos en el siguiente enlace y nos pondremos en contacto con usted lo antes posible."
+		}
+	},
+	"footer": {
+		"description": "Harbor es seguridad y funcionalidad. Nuestro objetivo es proteger sus redes e infraestructura, a la vez que permanece totalmente transparente y permite que su software se ejecute sin interrupciones y que su gente trabaje en un entorno familiar y confortable.",
+		"about": "Sobre Harbor",
+		"links": "enlaces rápidos"
+	},
+	"nav": {
+		"home": "Casa",
+		"case studies": "Estudios de Caso",
+		"clients": "Cliente Y Socios",
+		"contact": "Contacto",
+		"about": "Acerca De"
+	},
+	"form": {
+		"name": "Nombre",
+		"email": "Correo Electrónico",
+		"phone": "Teléfono",
+		"subject": "Tema",
+		"industries": "Industria",
+		"message": "Mensaje"
+	},
+	"testimonials": "Lo que dice la gente",
+	"get_in_touch": "Estar en conceto",
+	"sendMessage": "Enviar",
+	"readMore": "Lee mas"
+}

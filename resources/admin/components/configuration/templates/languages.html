@@ -1,0 +1,58 @@
+	<div>
+		<!--  -->
+		<a class="default__link custom--link" data-toggle="modal" data-target="#myModal">
+			Add Language	
+		</a>
+		<!--  -->
+		<div v-sortable="{onEnd: reorder}">
+			<div class="table__cell" v-for="language in languages" :key="language.id">
+				<div class="col-md-3 table__td flex--display">
+					<label>Key:</label>
+					<p>{{ language.key }}</p>
+				</div>
+				<div class="col-md-6 table__td flex--display">
+					<label>Name:</label>
+					<p>{{ language.name }}</p>
+				</div>
+				<div class="col-md-3 table__td flex--display justify--end">
+					<a href="javascript:void(0)" class="table__actions"  v-on:click="findById(language)"  data-toggle="modal" data-target="#myModal"><i class="fa fa-pencil"></i></a>
+					<a href="javascript:void(0)" class="table__actions" v-on:click="deleteObject(language)"><i class="fa fa-trash"></i></a>
+				</div>
+			</div>
+<!-- 			  <ul style="width: 100%;height: 300px;background: red;" v-sortable="{onEnd: onUpdate}">
+    			<li v-for="i in items" :key="i.id">{{ i.id }}</li>
+  				</ul> -->
+		</div>
+
+
+		<!-- LANGUAGES MODAL -->
+	 	<div class="modal fade" id="myModal" role="dialog">
+		    <div class="modal-dialog">
+		      <div class="modal-content">
+		        <div class="modal-header">
+		          <button type="button" class="close" data-dismiss="modal">&times;</button>
+		          <h4 class="modal-title">Add Language</h4>
+		        </div>
+		        <div class="modal-body layout__holder layout--auto-height">
+		          <div class="layout__form">
+		            <div class="layout__input col-md-12">
+		              <label>Key</label>
+		              <input v-model="language.key" type="text">
+		              <span class="fields__error" v-if="errors.key !== undefined">{{ errors.key[0] }}</span>
+		            </div>
+		            <div class="layout__input col-md-12">
+		              <label>Name</label>
+		              <input v-model="language.name" type="text">
+		               <span class="fields__error" v-if="errors.name !== undefined">{{ errors.name[0] }}</span>
+		            </div>
+		          </div>
+		        </div>
+		        <div class="modal-footer">
+		          <button class="visit__website save__button cancel relative--position" data-dismiss="modal">Close</button>
+		          <button class="visit__website save__button relative--position" v-on:click="save(language)">Save</button>
+		        </div>
+		      </div>
+		      
+		    </div>
+	  	</div>
+	</div>

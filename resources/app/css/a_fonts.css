@@ -1,0 +1,74 @@
+/*====================================*/
+
+/*        -EMIRATES GRAPHIC-          */
+
+/*        emiratesgraphic.com         */
+
+/*====================================*/
+
+/*====================*/
+/*       FONTS        */
+/*====================*/
+/* font-family: 'Roboto', sans-serif;
+font-family: 'Bai Jamjuree', sans-serif; */
+p {
+  font-family: 'Roboto', sans-serif !important;
+  font-size: 15px;  
+  line-height: 30px;
+}
+.title {
+  font-family: 'Bai Jamjuree', sans-serif;
+}
+button:active {
+  outline: none !important;
+}
+button:focus {
+  outline: none !important;
+}
+input:active {
+  outline: none !important;
+}
+input:focus {
+  outline: none !important;
+}
+
+a button:hover {
+  text-decoration: none !important;
+  cursor: pointer !important;
+}
+
+textarea:active {
+  outline: none !important;
+}
+textarea:focus {
+  outline: none !important;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+a:hover {
+  text-decoration: none !important;
+}
+
+.no_padding {
+  padding: 0px !important;
+}
+
+.small_padding-lr {
+  padding: 0px 5px !important;
+}
+
+.hr_default {
+  width: 150px;
+  margin: 15px 0px;
+  border-top: solid 2px #BBAC78;
+}
+
+@media (min-width: 1200px) {
+  .container {
+      width: 1380px;
+      max-width: 100%;
+    }
+  }

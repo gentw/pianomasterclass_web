@@ -1,0 +1,91 @@
+<div class="page__types">
+	<h2 class="type__title">Add Page Type</h2>
+	<span class="type__divider"></span>
+	<div class="col-md-12 custom__fields-container">
+		<div class="col-md-12 no__padding">
+			<h4>Basic Fields</h4>
+			<a class="default__link custom--link no-right" data-toggle="modal" data-target="#typesModal">
+				Add Basic Fields	
+			</a>
+		</div>
+		<div class="col-md-12 card__table no__padding" v-for="basic in basics.fields">
+			<div class="table__cell">
+				<div class="col-md-3 table__td flex--display">
+					<label>Label:</label>
+					<p>{{ basic.label }}</p>
+				</div>
+				<div class="col-md-3 table__td flex--display">
+					<label>Name:</label>
+					<p>{{ basic.name }}</p>
+				</div>
+				<div class="col-md-3 table__td flex--display">
+					<label>Type:</label>
+					<p>{{ basic.type }}</p>
+				</div>
+				<div class="col-md-3 table__td flex--display justify--end">
+					<a href="javascript:void(0)" class="table__actions" data-toggle="modal" data-target="#myModal"><i class="fa fa-pencil"></i></a>
+					<a href="javascript:void(0)" class="table__actions"><i class="fa fa-trash"></i></a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!--  -->
+	<div class="modal fade" id="typesModal" role="dialog">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+					<h4 class="modal-title">Add Basic Fields</h4>
+				</div>
+				<div class="modal-body layout__holder layout--auto-height">
+					<div class="layout__form">
+						<div class="layout__input col-md-12">
+							<label>Label</label>
+							<input v-model="basic.label" type="text">
+							<!-- <span class="fields__error" v-if="errors.name !== undefined">{{ errors.name[0] }}</span> -->
+						</div>
+						<div class="layout__input col-md-12">
+							<label>Field Name</label>
+							<input v-model="basic.name" type="text">
+							 <!-- <span class="fields__error" v-if="errors.slug !== undefined">{{ errors.slug[0] }}</span> -->
+						</div>
+						<div class="layout__input col-md-12">
+							 <label>Field Type</label>
+							 <select class="default__select" v-model="basic.type">
+ 								<option value="text">Text</option>
+ 								<option value="editor">Editor</option>
+ 								<option value="file">File</option>
+ 								<option value="gallery">Gallery</option>
+ 								<option value="numeric">Numeric</option>
+ 								<option value="date">Date</option>
+ 								<option value="email">Email</option>
+ 								<option value="checkbox">Checkbox</option>
+							 </select>
+							 <!-- <span class="fields__error" v-if="errors.name !== undefined">{{ errors.parent[0] }}</span> -->
+						</div>
+						<div class="layout__input col-md-12">
+							 <label>Field Rule</label>
+							 <select class="default__select" v-model="basic.rule">
+							 	<option value="required">Required</option>
+							 </select>
+							 <!-- <span class="fields__error" v-if="errors.name !== undefined">{{ errors.parent[0] }}</span> -->
+						</div>
+						<div class="layout__input col-md-12">
+							 <label>Slugable</label>
+							 <select class="default__select" v-model="basic.slugable">
+							 	<option value="1">True</option>
+							 	<option value="0">False</option>
+							 </select>
+							 <!-- <span class="fields__error" v-if="errors.name !== undefined">{{ errors.parent[0] }}</span> -->
+						</div>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button class="visit__website save__button cancel relative--position" data-dismiss="modal">Close</button>
+					<button class="visit__website save__button relative--position" v-on:click="saveBasic(basic)">Save</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

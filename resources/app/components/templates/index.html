@@ -1,0 +1,558 @@
+<div class="wrapper">
+	<!-- SECTION HOME -->
+	<section class="home" v-if="slug == 'home'">
+
+		<div class="cover_section_homepage">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-md-9 no_padding">
+							<div id="carousel-example-generic" class="carousel slide slider_homepage" data-ride="carousel">
+							  <!-- Indicators -->
+							  <!-- Wrapper for slides -->
+
+							  <div class="carousel-inner homepage_slider_top" role="listbox" v-if="globalRequest.many[1]">
+							    <div class="item" v-for="(news, index) in globalRequest.many[1].news" v-bind:class="{'active': index == 0}">
+									<img class="d-block img-fluid" :src="'/img/manjakos/' + news.collections.image" />
+									<div class="text_in_home_slider">
+										<h2>{{news.collections.title[lang]}}</h2>
+										<router-link :to="{name: 'pagecomponent', params: {lang: 'en', parent: 'news', id: news.id, slug: news.slugable[lang]}}">
+											<button class="default_pink_btn">READ MORE</button>
+										</router-link>
+									</div>
+							    </div>
+							  </div>
+
+							  <!-- Controls -->
+							  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+							    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+							    <span class="sr-only">Previous</span>
+							  </a>
+							  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+							    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+							    <span class="sr-only">Next</span>
+							  </a>
+							</div>
+
+					</div>
+					<div class="col-md-3">
+						<upcoming-events-component :globalReq="globalRequest"></upcoming-events-component>
+					</div>
+				</div>
+			</div>
+		</div>
+		<services-component></services-component>
+
+		<section class="read_more_home_section">
+			<div class="container-fluid">
+				<div class="row" v-if="one['home-section-third']"><!--
+					<div class="col-md-7 no_padding">
+						<img src="/img/Mask Group 53.png" class="img-fluid">
+					</div>	 -->
+					<div class="col-md-12 text_gridreadmore_home wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".3s">
+						<img :src="'/img/manjakos/' + one['home-section-third'].collections.image">
+						<p v-html="one['home-section-third'].collections.description[lang]"></p>
+						<router-link to="about-us"><button class="default_pink_btn">read more</button></router-link>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="job_section_listing">
+			<div class="container" v-if="many[0]">
+
+
+				<h2 class="pink_title_"><router-link to="/blockHub">BlockHub</router-link></h2>
+				<companycards-component></companycards-component>
+				<h2 class="pink_title_"><router-link to="/jobs">JOBS</router-link></h2>
+				<div class="row wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">
+					<div class="col-md-3" v-for="job in many[0].jobs">
+						<div class="card_job_home box_shadow_default">
+							<img :src="'/img/manjakos/' + job.collections['logo']">
+							<h3>{{job.collections['company-name'][lang]}}</h3>
+							<h4>{{job.collections['position'][lang]}}</h4>
+							<p v-html="job.collections['description'][lang]"></p>
+							<button class="default_pink_btn">Apply Now</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="container">
+				<div class="col-md-12">
+					<div class="top_add_second_s_news">
+						<img src="/img/banner-728-x-90-gif.gif">
+					</div>
+				</div>
+			</div>
+ 
+		</section>
+
+<communities-component></communities-component>
+
+<!-- TabSectionHomepage -->
+
+
+<!-- This Email Include is on Homepage and COmmunities Page -->
+<homecommunities-component></homecommunities-component>
+
+
+
+    
+	</section>
+
+ 
+
+<!-- News Page DOWN -->
+
+	<section class="news" v-if="slug == 'news'">
+		<div class="news_bg_body">
+
+			<section class="cover_carousel_news">
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col-md-12 no_padding">
+
+							<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+							  <!-- Indicators -->
+								<div class="col-md-12 no_padding">
+									<div id="carousel-example-generic" class="carousel slide slider_homepage" data-ride="carousel">
+										<!-- Indicators -->
+										<!-- Wrapper for slides -->
+
+										<div class="carousel-inner homepage_slider_top" role="listbox" v-if="globalRequest.many[1]">
+											<div class="item" v-for="(news, index) in globalRequest.many[1].news" v-bind:class="{'active': index == 0}">
+												<img class="d-block img-fluid" :src="'/img/manjakos/' + news.collections.image" />
+												<div class="text_in_home_slider">
+													<h2>{{news.collections.title[lang]}}</h2>
+												</div>
+											</div>
+										</div>
+
+										<!-- Controls -->
+										<a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+											<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+											<span class="sr-only">Previous</span>
+										</a>
+										<a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+											<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+											<span class="sr-only">Next</span>
+										</a>
+									</div>
+
+								</div>
+
+
+						</div>
+
+					</div>	
+				</div>
+				</div>
+			</section>
+
+			<div class="container">
+				<div class="col-md-12">
+					<div class="top_add_second_s_news">
+						<img src="/img/banner-728-x-90-gif.gif">
+					</div>
+				</div>
+			</div>
+ 
+			<section class="news_big_block_section">
+				<div class="container">
+					<div class="row col-md-12">
+					        <div class="row  col-md-12" v-if="many[0]">
+					            <div class="col-md-4" v-for="news in many[0]['news']">
+									<div class="news_card_info box_shadow_default">
+										<img :src="'/img/manjakos/' + news.collections.image">
+										<div class="text_under_news_card">
+											<!--<h4>{{ news.collections.date | moment("calendar") }}</h4>-->
+											<p>{{ news.collections.title[lang] }}</p>
+												<router-link :to="{name: 'pagecomponent', params: {lang: 'en', parent: 'news', id: news.id, slug: news.slugable[lang]}}"><button class="default_pink_btn">READ MORE</button></router-link>
+										</div>
+									</div>
+								</div>
+					        </div>
+				    </div>
+				</div>
+			</section>
+
+			<section class="news_panels_with_slider" style="display: none;">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-6 small_padding-lr wow fadeInUp" data-wow-duration="1s" data-wow-delay=".2s">
+							<div id="carouselExampleControls" class="carousel slide news_carousel_twice" data-ride="carousel">
+							  <div class="carousel-inner" role="listbox">
+							    <div class="carousel-item active">
+							      <img class="d-block img-fluid" src="/img/slider/Group-182.png" alt="First slide">
+									  <div class="carousel-caption d-md-block">
+									    <!-- <h3>NEWS ONE ABOUT</h3> -->
+									    <p>Keep up to date with the lastest blockchain news</p>
+									  </div>
+							    </div>
+							    <div class="carousel-item">
+							      <img class="d-block img-fluid" src="/img/slider/Group-181.png" alt="Second slide">
+									  <div class="carousel-caption d-md-block">
+									    <!-- <h3>NEWS TWO ABOUT</h3> -->
+									    <p>Keep up to date with the lastest blockchain news</p>
+									  </div>
+							    </div>
+							    <div class="carousel-item">
+							      <img class="d-block img-fluid" src="/img/slider/Group-182.png" alt="Third slide">
+									  <div class="carousel-caption d-md-block">
+									    <!-- <h3>NEWS THREE ABOUT</h3> -->
+									    <p>Keep up to date with the lastest blockchain news</p>
+									  </div>
+							    </div>
+							  </div>
+							  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+							    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+							    <span class="sr-only">Previous</span>
+							  </a>
+							  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+							    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+							    <span class="sr-only">Next</span>
+							  </a>
+							</div>
+						</div>
+
+
+						<div class="col-md-6 small_padding-lr wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s"  style="display: none;">
+							<div id="carouselExampleControls2" class="carousel slide news_carousel_twice" data-ride="carousel">
+							  <div class="carousel-inner" role="listbox">
+							    <div class="carousel-item active">
+							      <img class="d-block img-fluid" src="/img/slider/Group-182.png" alt="Forth slide">
+									  <div class="carousel-caption d-md-block">
+									    <!-- <h3>NEWS ONE ABOUT</h3> -->
+									    <p>Keep up to date with the lastest blockchain news</p>
+									  </div>
+							    </div>
+							    <div class="carousel-item">
+							      <img class="d-block img-fluid" src="/img/slider/Group-182.png" alt="Fifth slide">
+									  <div class="carousel-caption d-md-block">
+									    <!-- <h3>NEWS TWO ABOUT</h3> -->
+									    <p>Keep up to date with the lastest blockchain news</p>
+									  </div>
+							    </div>
+							    <div class="carousel-item">
+							      <img class="d-block img-fluid" src="/img/slider/Group-181.png" alt="Sixth slide">
+									  <div class="carousel-caption d-md-block">
+									    <!-- <h3>NEWS THREE ABOUT</h3> -->
+									    <p>Keep up to date with the lastest blockchain news</p>
+									  </div>
+							    </div>
+							  </div>
+							  <a class="carousel-control-prev" href="#carouselExampleControls2" role="button" data-slide="prev">
+							    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+							    <span class="sr-only">Previous</span>
+							  </a>
+							  <a class="carousel-control-next" href="#carouselExampleControls2" role="button" data-slide="next">
+							    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+							    <span class="sr-only">Next</span>
+							  </a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+
+			<section class="news_big_block_section"  style="display: none;">
+				<div class="container">
+					<div class="row wow fadeInUp" data-wow-duration="1s" data-wow-delay=".2s">
+						<div class="swiper-container swiper-container_logos">
+					        <div class="swiper-wrapper">
+					            <div class="swiper-slide">
+									<div class="news_card_info box_shadow_default">
+										<img src="/img/Mask Group 36.png">
+										<div class="text_under_news_card">
+											<h4>17 March 2017</h4>
+											<p>Keep up to date with the lastest blockchain news</p>
+											<button class="default_pink_btn">READ MORE</button>
+										</div>
+									</div>
+								</div>
+					            <div class="swiper-slide">
+									<div class="news_card_info box_shadow_default">
+										<img src="/img/Mask Group 36.png">
+										<div class="text_under_news_card">
+											<h4>17 March 2017</h4>
+											<p>Keep up to date with the lastest blockchain news</p>
+											<button class="default_pink_btn">READ MORE</button>
+										</div>
+									</div>
+								</div>
+					            <div class="swiper-slide">
+									<div class="news_card_info box_shadow_default">
+										<img src="/img/Mask Group 36.png">
+										<div class="text_under_news_card">
+											<h4>17 March 2017</h4>
+											<p>Keep up to date with the lastest blockchain news</p>
+											<button class="default_pink_btn">READ MORE</button>
+										</div>
+									</div>
+								</div>
+					            <div class="swiper-slide">
+									<div class="news_card_info box_shadow_default">
+										<img src="/img/Mask Group 36.png">
+										<div class="text_under_news_card">
+											<h4>17 March 2017</h4>
+											<p>Keep up to date with the lastest blockchain news</p>
+											<button class="default_pink_btn">READ MORE</button>
+										</div>
+									</div>
+								</div>
+					        </div>
+					    </div>
+				    </div>
+				</div>
+			</section>
+
+
+    	
+		</div>
+	</section>
+
+
+<!-- Services PAGE DOWN HERE!! -->
+	<section class="services" v-if="slug == 'services'">
+
+		<section class="cover_services_page">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-7">
+						<h2 class="default_cover_title_w">Our Services
+						</h2>
+						<p class="default_paragraph_cover">We offer a wide range of training and consultancy services, give visibility to start-ups, organise industry events and hackathons, and build blockchain communities and ecosystems. 
+						</p>
+						<button class="default_pink_btn">CONTACT US</button>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<services-component></services-component>
+
+<!-- 		<section class="read_more_home_section">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-md-7 no_padding">
+						<img src="/img/Mask Group 53.png" class="img-fluid">
+					</div>	
+					<div class="col-md-5 text_gridreadmore_home wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".2s">
+						<img src="/img/logo/Group 180.png">
+						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries</p>
+						<button class="default_pink_btn">read more</button>
+					</div>
+				</div>
+			</div>
+		</section> -->
+
+		<!-- Email Form for About us and Servces is down here on this Include -->
+		<aboutservices-component></aboutservices-component>
+
+
+		
+	</section>
+
+
+
+
+
+	<!-- SECTION COMMMUNITIES DOWN HERE -->
+	<section class="home" v-if="slug == 'communities'">
+		<div v-if="one['communities-header']">
+			<section class="communities_section_cover" v-bind:style="{ 'background-image': 'url(/img/manjakos/' + one['communities-header'].collections.background + ')' }">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-7">
+							<h2 class="default_cover_title_w wow fadeInUp" data-wow-duration="1s" data-wow-delay=".2s">{{one['communities-header'].collections.title[lang]}}</h2>
+							<p class="default_paragraph_cover wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s" v-html="one['communities-header'].collections.description[lang]"> </p>
+							<a href="#slide_one"><button class="default_pink_btn wow fadeInUp" data-wow-duration="1s" data-wow-delay=".4s">CONTACT US</button></a>
+						</div>
+					</div>
+				</div>
+			</section>
+	    </div>
+
+		<section class="section_two_pans_comm">
+			<div class="container" v-if="many[0]">
+				<div class="row" v-for="com in many[0]['communities-second-section']">
+					<div class="col-md-5 wow fadeInRight" data-wow-duration="1s" data-wow-delay=".2s">
+						<img :src="'/img/manjakos/' + com.collections.image" class="box_shadow_default img-fluid">
+					</div>
+					<div class="col-md-5 col-md-offset-1 wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".2s">
+						<h2>{{com.collections.title[lang]}}</h2>
+						<p v-html="com.collections.description[lang]"></p>
+						<a href="#slide_one"><button class="default_pink_btn">LEARN MORE</button></a>
+					</div>
+				</div>
+			</div>
+		</section>
+
+
+<div id="slide_one"></div>
+		<!-- This Email Include is on Homepage and COmmunities Page -->
+		<homecommunities-component></homecommunities-component>
+
+
+		
+
+	</section>
+
+
+	<!-- SECTION ABOUT US DOWN HERE -->
+	<section class="home" v-if="slug == 'about-us'">
+
+		<section class="cover_about_page">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-7">
+						<h2 class="default_cover_title_w">About</h2>
+						<p class="default_paragraph_cover">We are an international team of professionals and technology enthusiasts who are passionate about sharing and growing the knowledge about blockchain technology. Our platform connects individuals, entrepreneurs, enterprises and investors so that we can learn, collaborate and innovate to realise blockchain’s full potential. </p>
+						<!-- <button class="default_pink_btn">CONTACT US</button> -->
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<services-component></services-component>
+
+		<section class="read_more_home_section">
+			<div class="container-fluid">
+				<div class="row"><!-- 
+					<div class="col-md-7 no_padding">
+						<img src="/img/Mask Group 53.png" class="img-fluid">
+					</div>	 -->
+					<div class="col-md-12 text_gridreadmore_home wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".3s">
+						<img src="/img/logo/Group 180.png">
+						<p>We are an international team of professionals and technology enthusiasts who are passionate about sharing and growing the knowledge about blockchain technology. Our platform connects individuals, entrepreneurs, enterprises and investors so that we can learn, collaborate and innovate to realise blockchain’s full potential. </p>
+						<button class="default_pink_btn">read more</button>
+					</div>
+				</div>
+			</div>
+		</section>
+		<communities-component></communities-component>
+
+		<!-- Email Form for About us and Servces is down here on this Include -->
+		<aboutservices-component></aboutservices-component>
+
+		
+
+	</section>
+
+	<!-- SECTION ABOUT US DOWN HERE -->
+	<section class="home" v-if="slug == 'jobs'">
+
+		<section class="title_section_jobs">
+			<div class="container">
+				<div class="row">
+					<h2 class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".2s">Our Job Listings</h2>
+					<p class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">Lorem Ipsum is simply dummy text of the printing and typesetting industry.<br> Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
+				</div>
+			</div>
+		</section>
+
+		<section class="job_applications_cards">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-3">
+						<div class="card_job_home box_shadow_default">
+							<img src="/img/logo_ran.png">
+							<h3>Company Name</h3>
+							<h4>Software Engineer</h4>
+							<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer </p>
+							<button class="default_pink_btn">Apply Now</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		
+	</section>
+
+
+	<section class="home" v-if="slug == 'events'">
+
+		<section v-if="one['events-header']" class="cover_events_page" v-bind:style="{ 'background-image': 'url(/img/manjakos/' + one['events-header'].collections.background + ')' }">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-7">
+						<h2 class="default_cover_title_w wow fadeInUp" data-wow-duration="1s" data-wow-delay=".2s">{{ one['events-header'].collections.title[lang] }}</h2>
+						<button class="default_pink_btn wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">CONTACT US</button>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="events_section_cards">			
+			<div class="container">
+				<div class="row wow fadeInUp" data-wow-duration="1s" data-wow-delay=".2s" v-if="many[0]">
+					<div class="col-md-4" v-for="event in many[0].events">
+						<div class="card_for_events">
+						  <img :src="'/img/manjakos/' + event.collections.image" alt="Avatar" class="image">
+						  <div class="overlay_ev">
+						    <div class="text_event_card">
+						    	<router-link :to="{name: 'pagecomponent', params: {lang: 'en', parent: 'event', id: event.id, slug: event.slugable[lang]}}">
+									<h3>{{ event.collections.date | moment("calendar") }}</h3>
+									<p>{{ event.collections.title[lang] }}</p>
+								</router-link>
+						    </div>
+						  </div>
+						</div>
+					</div>
+				</div>
+			</div>		
+		</section>
+		
+	</section>
+
+
+	<section class="home" v-if="slug == 'block-hub'">
+
+		<section class="blockhub_section_all">
+			<div class="container">
+				<div class="row block_titles_">
+					<h2>The Block Hub</h2>
+					<p>The Block Hub is an alphabetically ordered index consisting of all the blockchain technology related companies in the region. Companies can also feature their comprehensive profiles here.</p>
+				</div>
+
+				<div class="row block_card_section" v-if="many[0]">
+					<div class="col-md-3" v-for="block in many[0]['block-hub-entries']">
+						<div class="blockhub_cards box_shadow_default" >
+							<img src="/img/STORM_(2).png">
+							<!-- <h3>INDUSTRY</h3> -->
+							<h2>{{block.collections.title[lang]}}</h2>
+							<div class="paragraph_button_hidden_block">
+								<p v-html="block.collections.description[lang]"></p>
+								<router-link :to="{name: 'pagecomponent', params: {lang: 'en', parent: 'block-hub', id: block.id, slug: block.slugable[lang]}}">
+									<button class="default_pink_btn">Profile</button>
+								</router-link>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<section class="lastest_projects_section">
+					<div class="row block_titles_">
+						<h2>Latest Projects</h2>
+						<p>Stay up to date with the latest Blockchain Projects and get in touch with them if you would like to contribute.</p>
+					</div>
+					<div class="row">
+						<div class="col-md-3">
+							<div class="lastest_proj_card box_shadow_default">
+							<h2>Project Name</h2>
+								<button class="default_pink_btn">Enquire</button>
+							</div>
+						</div>
+						<div class="col-md-3">
+							<div class="lastest_proj_card box_shadow_default">
+							<h2>Project Name</h2>
+								<button class="default_pink_btn">Enquire</button>
+							</div>
+						</div>
+					</div>
+				</section>
+			</div>
+		</section>
+	</section>
+</div>

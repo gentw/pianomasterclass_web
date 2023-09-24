@@ -1,0 +1,561 @@
+.navbar {
+  padding-top: 0.625rem;
+  padding-bottom: 0.625rem;
+  min-height: 53px;
+  margin-bottom: 20px;
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.15);
+  transition: ease all 0.3s;
+}
+.navbar-transparent  {
+  background-color: transparent !important;
+  padding-top: 30px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0), 0 1px 2px rgba(0,0,0,0) !important;
+}
+.navbar-transparent a {
+  color: #fff !important;
+}
+.router-link-exact-active {
+  color: red !important;
+  font-weight: bolder;
+}
+/*Navbar Links*/
+.navbar a {
+  color: #fff;
+  vertical-align: middle; 
+  font-family: 'OpenSans-Regular' !important;
+  text-transform: capitalize;
+}
+.navbar a:hover {
+  text-decoration: none !important; 
+}
+.active_nav_button {
+  background-color: black;
+}
+
+.navbar .nav-link p {
+  margin: 2px;
+  font-size: 16px;
+  padding: 3px 7px;
+  text-transform: uppercase;
+}
+
+.auto_width {
+  background: #020A19 !important;
+  padding-top: 10px !important;
+  transition: ease all 0.3s;
+}
+/*LOGO ON NAVIGATIONBAR*/
+
+.navbar-brand img {
+  width: 200px;
+}
+
+/*
+** After Scroll on desktop also mobile**
+*/
+
+
+.navbar-toggleable-md {
+  background: #020A19;
+  /*box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);*/
+}
+
+
+/******
+****
+******/
+
+
+/*SLIDE NAV ON MOBILE DEVICES*/
+
+@media screen and (max-width: 991px) {
+
+.navbar-brand img {
+  width: 150px;
+  margin-top: -14px;
+}
+
+
+  .navbar-collapse {
+    position: fixed;
+    display: block;
+    top: 0;
+    height: 100vh !important;
+    width: 300px;
+    right: 0;
+    z-index: 1032;
+    visibility: visible;
+    background-color: #999;
+    overflow-y: visible;
+    border-top: none;
+    text-align: left;
+    max-height: none !important;
+    -webkit-transform: translate3d(300px, 0, 0);
+    -moz-transform: translate3d(300px, 0, 0);
+    -o-transform: translate3d(300px, 0, 0);
+    -ms-transform: translate3d(300px, 0, 0);
+    transform: translate3d(300px, 0, 0);
+    -webkit-transition: all 0.5s cubic-bezier(0.685, 0.0473, 0.346, 1);
+    -moz-transition: all 0.5s cubic-bezier(0.685, 0.0473, 0.346, 1);
+    -o-transition: all 0.5s cubic-bezier(0.685, 0.0473, 0.346, 1);
+    -ms-transition: all 0.5s cubic-bezier(0.685, 0.0473, 0.346, 1);
+    transition: all 0.5s cubic-bezier(0.685, 0.0473, 0.346, 1); 
+
+    text-align: center;
+  }
+  .nav-open .navbar-collapse {
+    -webkit-transform: translate3d(0px, 0, 0);
+    -moz-transform: translate3d(0px, 0, 0);
+    -o-transform: translate3d(0px, 0, 0);
+    -ms-transform: translate3d(0px, 0, 0);
+    transform: translate3d(0px, 0, 0); }
+  .navbar-collapse:before {
+    background: #21221F;
+    /* For browsers that do not support gradients */
+    /* background: -webkit-linear-gradient(#020A19 80%,#ddd 100%); */
+    /* For Safari 5.1 to 6.0 */
+    /* background: -o-linear-gradient(#020A19 80%,#ddd 100%); */
+    /* For Opera 11.1 to 12.0 */
+    /* background: -moz-linear-gradient(#020A19 80%,#ddd 100%); */
+    /* For Firefox 3.6 to 15 */
+    /* background: linear-gradient(#020A19 80%,#ddd 100%); */
+    /* Standard syntax (must be last) */
+    opacity: 0.86;
+    filter: alpha(opacity=76);
+    display: block;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    /* z-index: -1;  */
+  }
+  .menu-on-left .navbar-collapse {
+    right: auto;
+    left: 0;
+    -webkit-transform: translate3d(-300px, 0, 0);
+    -moz-transform: translate3d(-300px, 0, 0);
+    -o-transform: translate3d(-300px, 0, 0);
+    -ms-transform: translate3d(-300px, 0, 0);
+    transform: translate3d(-300px, 0, 0); }
+
+  .profile-photo .profile-photo-small {
+    margin-left: -2px; }
+
+  [class*="navbar-toggleable-"] .navbar-collapse {
+    width: 300px; }
+
+  .button-dropdown {
+    display: none; }
+
+  .navbar .navbar-brand {
+    padding-top: .5rem;
+    padding-bottom: .5rem; }
+  .navbar .navbar-nav {
+    margin-top: 23vh; }
+  .navbar .navbar-nav.navbar-logo {
+    top: 0;
+    height: 53px; }
+  .navbar .dropdown.show .dropdown-menu, .navbar .dropdown .dropdown-menu {
+    background-color: transparent;
+    border: 0;
+    transition: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    width: auto;
+    margin: 0 1rem;
+    margin-top: -18px; }
+  .navbar .dropdown.show .dropdown-menu:before, .navbar .dropdown .dropdown-menu:before {
+    display: none; }
+  .navbar .dropdown-menu .dropdown-item:focus, .navbar .dropdown-menu .dropdown-item:hover {
+    color: #FFFFFF; }
+  .navbar .navbar-translate {
+    width: 100%;
+    position: relative;
+    -webkit-transform: translate3d(0px, 0, 0);
+    -moz-transform: translate3d(0px, 0, 0);
+    -o-transform: translate3d(0px, 0, 0);
+    -ms-transform: translate3d(0px, 0, 0);
+    transform: translate3d(0px, 0, 0);
+    -webkit-transition: all 0.5s cubic-bezier(0.685, 0.0473, 0.346, 1);
+    -moz-transition: all 0.5s cubic-bezier(0.685, 0.0473, 0.346, 1);
+    -o-transition: all 0.5s cubic-bezier(0.685, 0.0473, 0.346, 1);
+    -ms-transition: all 0.5s cubic-bezier(0.685, 0.0473, 0.346, 1);
+    transition: all 0.5s cubic-bezier(0.685, 0.0473, 0.346, 1); }
+  .navbar .navbar-toggler-bar {
+    display: block;
+    position: relative;
+    width: 22px;
+    height: 1px;
+    border-radius: 1px;
+    background: white; }
+  .navbar .navbar-toggler-bar + .navbar-toggler-bar {
+    margin-top: 7px; }
+  .navbar .navbar-toggler-bar.bar2 {
+    width: 17px;
+    transition: width .2s linear; }
+  .navbar.bg-white:not(.navbar-transparent) .navbar-toggler-bar {
+    background: black; }
+  .navbar .toggled .navbar-toggler-bar {
+    width: 24px; }
+  .navbar .toggled .navbar-toggler-bar + .navbar-toggler-bar {
+    margin-top: 5px; 
+    transition: all 0.5s cubic-bezier(0.685, 0.0473, 0.346, 1); }
+
+  .menu-on-left .navbar-brand {
+    float: right;
+    margin-right: 0;
+    margin-left: 1rem; }
+
+
+
+/*Qeto e shtyjin navigationbarin en mobil.!!*/
+  .nav-open .navbar-translate {
+    -webkit-transform: translate3d(0px, 0, 0);
+    -moz-transform: translate3d(0px, 0, 0);
+    -o-transform: translate3d(0px, 0, 0);
+    -ms-transform: translate3d(0px, 0, 0);
+    transform: translate3d(0px, 0, 0);
+    z-index: 9999; }
+  .nav-open .menu-on-left .navbar-collapse {
+    -webkit-transform: translate3d(0px, 0, 0);
+    -moz-transform: translate3d(0px, 0, 0);
+    -o-transform: translate3d(0px, 0, 0);
+    -ms-transform: translate3d(0px, 0, 0);
+    transform: translate3d(0px, 0, 0); }
+  .nav-open .menu-on-left .navbar-translate {
+    -webkit-transform: translate3d(300px, 0, 0);
+    -moz-transform: translate3d(300px, 0, 0);
+    -o-transform: translate3d(300px, 0, 0);
+    -ms-transform: translate3d(300px, 0, 0);
+    transform: translate3d(300px, 0, 0); }
+  .nav-open .menu-on-left .wrapper {
+    -webkit-transform: translate3d(150px, 0, 0);
+    -moz-transform: translate3d(150px, 0, 0);
+    -o-transform: translate3d(150px, 0, 0);
+    -ms-transform: translate3d(150px, 0, 0);
+    transform: translate3d(150px, 0, 0); }
+
+
+  .nav-open .menu-on-left #bodyClick {
+    right: auto;
+    left: 300px; }
+
+
+
+/*Vijat e menus*/
+  .bar1, .bar2, .bar3 {
+    outline: 1px solid transparent; }
+
+  .bar1 {
+    top: 0px;
+    -webkit-animation: topbar-back 500ms linear 0s;
+    -moz-animation: topbar-back 500ms linear 0s;
+    animation: topbar-back 500ms 0s;
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+    animation-fill-mode: forwards; }
+
+  .bar2 {
+    opacity: 1; }
+
+  .bar3 {
+    bottom: 0px;
+    -webkit-animation: bottombar-back 500ms linear 0s;
+    -moz-animation: bottombar-back 500ms linear 0s;
+    animation: bottombar-back 500ms 0s;
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+    animation-fill-mode: forwards; }
+
+  .toggled .bar1 {
+    top: 6px;
+    -webkit-animation: topbar-x 500ms linear 0s;
+    -moz-animation: topbar-x 500ms linear 0s;
+    animation: topbar-x 500ms 0s;
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+    animation-fill-mode: forwards; }
+
+  .toggled .bar2 {
+    opacity: 0; }
+
+  .toggled .bar3 {
+    bottom: 6px;
+    -webkit-animation: bottombar-x 500ms linear 0s;
+    -moz-animation: bottombar-x 500ms linear 0s;
+    animation: bottombar-x 500ms 0s;
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+    animation-fill-mode: forwards; }
+
+
+
+/*Animacioni i IKSIT "X" */
+  @keyframes topbar-x {
+    0% {
+      top: 0px;
+      transform: rotate(0deg); }
+    45% {
+      top: 6px;
+      transform: rotate(145deg); }
+    75% {
+      transform: rotate(130deg); }
+    100% {
+      transform: rotate(135deg); } }
+  @-webkit-keyframes topbar-x {
+    0% {
+      top: 0px;
+      -webkit-transform: rotate(0deg); }
+    45% {
+      top: 6px;
+      -webkit-transform: rotate(145deg); }
+    75% {
+      -webkit-transform: rotate(130deg); }
+    100% {
+      -webkit-transform: rotate(135deg); } }
+  @-moz-keyframes topbar-x {
+    0% {
+      top: 0px;
+      -moz-transform: rotate(0deg); }
+    45% {
+      top: 6px;
+      -moz-transform: rotate(145deg); }
+    75% {
+      -moz-transform: rotate(130deg); }
+    100% {
+      -moz-transform: rotate(135deg); } }
+  @keyframes topbar-back {
+    0% {
+      top: 6px;
+      transform: rotate(135deg); }
+    45% {
+      transform: rotate(-10deg); }
+    75% {
+      transform: rotate(5deg); }
+    100% {
+      top: 0px;
+      transform: rotate(0); } }
+  @-webkit-keyframes topbar-back {
+    0% {
+      top: 6px;
+      -webkit-transform: rotate(135deg); }
+    45% {
+      -webkit-transform: rotate(-10deg); }
+    75% {
+      -webkit-transform: rotate(5deg); }
+    100% {
+      top: 0px;
+      -webkit-transform: rotate(0); } }
+  @-moz-keyframes topbar-back {
+    0% {
+      top: 6px;
+      -moz-transform: rotate(135deg); }
+    45% {
+      -moz-transform: rotate(-10deg); }
+    75% {
+      -moz-transform: rotate(5deg); }
+    100% {
+      top: 0px;
+      -moz-transform: rotate(0); } }
+  @keyframes bottombar-x {
+    0% {
+      bottom: 0px;
+      transform: rotate(0deg); }
+    45% {
+      bottom: 6px;
+      transform: rotate(-145deg); }
+    75% {
+      transform: rotate(-130deg); }
+    100% {
+      transform: rotate(-135deg); } }
+  @-webkit-keyframes bottombar-x {
+    0% {
+      bottom: 0px;
+      -webkit-transform: rotate(0deg); }
+    45% {
+      bottom: 6px;
+      -webkit-transform: rotate(-145deg); }
+    75% {
+      -webkit-transform: rotate(-130deg); }
+    100% {
+      -webkit-transform: rotate(-135deg); } }
+  @-moz-keyframes bottombar-x {
+    0% {
+      bottom: 0px;
+      -moz-transform: rotate(0deg); }
+    45% {
+      bottom: 6px;
+      -moz-transform: rotate(-145deg); }
+    75% {
+      -moz-transform: rotate(-130deg); }
+    100% {
+      -moz-transform: rotate(-135deg); } }
+  @keyframes bottombar-back {
+    0% {
+      bottom: 6px;
+      transform: rotate(-135deg); }
+    45% {
+      transform: rotate(10deg); }
+    75% {
+      transform: rotate(-5deg); }
+    100% {
+      bottom: 0px;
+      transform: rotate(0); } }
+  @-webkit-keyframes bottombar-back {
+    0% {
+      bottom: 6px;
+      -webkit-transform: rotate(-135deg); }
+    45% {
+      -webkit-transform: rotate(10deg); }
+    75% {
+      -webkit-transform: rotate(-5deg); }
+    100% {
+      bottom: 0px;
+      -webkit-transform: rotate(0); } }
+  @-moz-keyframes bottombar-back {
+    0% {
+      bottom: 6px;
+      -moz-transform: rotate(-135deg); }
+    45% {
+      -moz-transform: rotate(10deg); }
+    75% {
+      -moz-transform: rotate(-5deg); }
+    100% {
+      bottom: 0px;
+      -moz-transform: rotate(0); } }
+  @-webkit-keyframes fadeIn {
+    0% {
+      opacity: 0; }
+    100% {
+      opacity: 1; } }
+  @-moz-keyframes fadeIn {
+    0% {
+      opacity: 0; }
+    100% {
+      opacity: 1; } }
+  @keyframes fadeIn {
+    0% {
+      opacity: 0; }
+    100% {
+      opacity: 1; } }
+
+
+/*Pozicioni i X "IKSIT" */
+@media screen and (max-width: 576px) {
+  .navbar[class*='navbar-toggleable-'] .container {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+
+
+
+/* Kur ta klikon jasht navbarit mi hek menun!*/
+  #bodyClick {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    opacity: 1;
+    top: 0;
+    left: auto;
+    right: 300px;
+    content: "";
+    z-index: 9999;
+    overflow-x: hidden;
+    background-color: transparent;
+    -webkit-transition: all 0.5s cubic-bezier(0.685, 0.0473, 0.346, 1);
+    -moz-transition: all 0.5s cubic-bezier(0.685, 0.0473, 0.346, 1);
+    -o-transition: all 0.5s cubic-bezier(0.685, 0.0473, 0.346, 1);
+    -ms-transition: all 0.5s cubic-bezier(0.685, 0.0473, 0.346, 1);
+    transition: all 0.5s cubic-bezier(0.685, 0.0473, 0.346, 1); }
+  }
+
+  .dark_navigationbar nav {
+    background: #020A19 !important;
+    position: relative;
+}
+
+
+
+
+#overlay_preloaders {
+	height: 100%;
+	width: 100%;
+	background-color: #0C1725;
+	position: fixed;
+	left: 0;
+	top: 0;
+	overflow: hidden !important;
+	z-index: 99999999999999;
+	text-align: center;
+}
+
+
+.large-header {
+	position: relative;
+	width: 100%;
+	background: #0C1725;
+	overflow: hidden;
+	background-size: cover;
+	background-position: center center;
+	z-index: 1222;
+}
+
+.preloader_img {
+	width: 120px;
+	position: relative;
+	top: 30%;
+	margin: 0 auto;
+	transition: ease all 0.3s;
+}
+
+.loading_gif {  
+  width: 45px;
+  position: relative;
+  top: 33%;
+  margin: 0 auto;
+}
+
+.loading_gif {
+  margin: 20px;
+  -webkit-animation-name: spin;
+  -webkit-animation-duration: 7000ms;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  -moz-animation-name: spin;
+  -moz-animation-duration: 4000ms;
+  -moz-animation-iteration-count: infinite;
+  -moz-animation-timing-function: linear;
+  -ms-animation-name: spin;
+  -ms-animation-duration: 4000ms;
+  -ms-animation-iteration-count: infinite;
+  -ms-animation-timing-function: linear;
+  
+  animation-name: spin;
+  animation-duration: 4000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+@-ms-keyframes spin {
+  from { -ms-transform: rotate(0deg); }
+  to { -ms-transform: rotate(360deg); }
+}
+@-moz-keyframes spin {
+  from { -moz-transform: rotate(0deg); }
+  to { -moz-transform: rotate(360deg); }
+}
+@-webkit-keyframes spin {
+  from { -webkit-transform: rotate(0deg); }
+  to { -webkit-transform: rotate(360deg); }
+}
+@keyframes spin {
+  from {
+      transform:rotate(0deg);
+  }
+  to {
+      transform:rotate(360deg);
+  }
+}
+

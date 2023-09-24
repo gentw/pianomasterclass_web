@@ -1,0 +1,297 @@
+@extends('index')
+@section('title_and_meta')
+
+@endsection
+@section('content')
+
+<!-- banner start -->
+
+<?php
+    //var_dump($many[0]["slider"][0]['collections']);
+    // foreach($many as $slide) {
+    //     echo $slide;
+    // }
+
+ ?>
+  <div id="youtubev" style="display:none;" url="{!!$one['intro_video']['collections']['video_url']['en']!!}"></div>
+    <div class="banner-style-2">
+         <div class="banner-slider-2">
+
+            @foreach ($many[0]["slider"] as $slide) 
+            <div class="banner-single-style-2">
+                <h2>{{$slide['collections']['title']['en']}}</h2>
+                <p>{{$slide['collections']['description']['en']}}</p>
+                <div class="d-flex justify-content-start margin-top-50">
+                    <div class="btn-wrapper mr-3" data-animation-in="fadeInUp">
+                        <a class="btn btn-custom-default" href="{{$slide['collections']['button_1_link']['en']}}">{{$slide['collections']['button_1_txt']['en'] }}</a>
+                    </div>
+                    <div class="btn-wrapper" data-animation-in="fadeInUp">
+                        <a class="btn btn-custom-white" href="{{$slide['collections']['button_2_link']['en'] }}">{{$slide['collections']['button_2_txt']['en'] }}</a>
+                    </div>
+                </div>
+                <div class="thumb">
+                    <img src="img/manjakos/{{$slide['collections']['image']}}" alt="">
+                </div>
+            </div>
+            @endforeach
+
+
+           
+        </div>
+
+        <div class="banner-left">
+            <ul class="banner-two-social">
+                <li><a href="<%includes.global.one[0]['socials']['collections']['fb']['en']%>"><i class="fa fa-facebook-f"></i></a></li>
+                <li><a href="<%includes.global.one[0]['socials']['collections']['insta']['en']%>"><i class="fa fa-instagram"></i></a></li>
+                <li><a href="<%includes.global.one[0]['socials']['collections']['twitter']['en']%>"><i class="fa fa-twitter"></i></a></li>
+            </ul>
+            <p class="scroll-style-02"> <a href="./"><span>↼</span> Shko poshte</a></p>
+        </div>
+        <div class="controler-wrapper-style-03">
+            <div class="progressbar">
+                <span class="home-slider-progress"></span>
+                <span class="home-slider-progress-active"></span> 
+            </div>
+            <span class="active-controler">01</span><span>/</span><span class="total-controler">0{{count($many[0]["slider"])}}</span>
+        </div>
+        <div class="video-btn-style-05">
+            <div class="thumb">
+                <img src="img/manjakos/{!!$one['intro_video']['collections']['image']!!}" alt="">
+                <i class="fa fa-play"></i>
+            </div>
+            <p>{!!$one['intro_video']['collections']['button']['en']!!}</p>
+        </div>
+    </div>
+    <!-- banner end -->
+
+        <!-- action area start -->
+    <div class="action-area padding-top-120 position-relative">
+        <div class="donate-wrapper">
+            <a href="/dhuro"><i class="fa fa-heart"></i> Dhuro tani</a>
+        </div> 
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5 align-self-center">
+                    <div class="content-box-style-01">
+                        <p class="section-subtitle">{!!$one['about_pse_alternativa']['collections']['above_title']['en']!!}</p>
+                        <h2 class="title">{!!$one['about_pse_alternativa']['collections']['title']['en']!!}</h2>
+                        <p class="para">{!!$one['about_pse_alternativa']['collections']['text']['en']!!}</p>
+                        <div class="btn-wrapper align-self-center margin-top-50">
+                            <a class="btn btn-custom-primary" href="{!!$one['about_pse_alternativa']['collections']['button_link']['en']!!}">{!!$one['about_pse_alternativa']['collections']['button']['en']!!}</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 offset-lg-1">
+                    <div class="goal-area">
+                        <ul class="goal-list">
+                            @foreach ($many[1]["about_planprogrami"] as $p) 
+                            <li>
+                                <div class="icon"><i class="{{$p['collections']['icon']['en']}}"></i></div>
+                                <div class="content">
+                                    <h4 class="title">{{$p['collections']['title']['en']}}</h4>
+                                    <p>{{$p['collections']['description']['en']}}</p>
+                                </div>
+                            </li>
+                            @endforeach
+                            
+                        </ul>
+                        <div class="btn-wrapper text-center">
+                            <a href="/uploads/Alternativa.pdf">Shkarko programin e Alternatives</a> ➝
+                        </div>
+                        <div class="mission-area">Misioni</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- action area end  -->
+
+   
+    
+
+    <div class="up-event-two padding-bottom-115" style="padding-top: 115px;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="text-center margin-bottom-55">
+                        <h2 class="section-title"><%includes.global.one[0]['events_header']['collections']['title']['en']%></h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6" ng-repeat="event in includes.global.many[1]['upcoming_events']">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="thumb">
+                                <img src="/img/manjakos/<%event['collections']['image']%>" alt="">
+                            </div>
+                        </div>
+                        <div class="col-md-5" >
+                            <div class="up-content-style-01">
+                                <div class="date-month">
+                                    <span class="date"><%event['collections']['date']['day']%></span>
+                                    <span class="month"><%event['collections']['date']['month']%></span>
+                                </div>
+                                <h6><a href="/<%event['slugable']['en']%>"><%event['collections']['title']['en']%></a></h6>
+                                <ul>
+                                    <li><a href="/<%event['slugable']['en']%>"><i class="fa fa-map-marker"></i> <%event['collections']['location']['en']%></a></li>
+                                    <li><a href="/<%event['slugable']['en']%>"><i class="fa fa-bell"></i> <%event['collections']['time']['en']%></a></li>
+                                    <!--<li><a href="#"><i class="fa fa-user"></i> 547 People are going</a></li>-->
+                                </ul>
+                                <!--<div class="btn-wrapper">
+                                    <a href="#">Book your seat ➞</a>
+                                </div>-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- team area start  -->
+    <div class="guest-area padding-bottom-90">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="text-center margin-bottom-55">
+                        <h2 class="section-title"><%includes.global.one[0]['bordi_header']['collections']['title']['en']%></h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row about-member-count">
+
+                @foreach ($many[2]["bordi"] as $bordi) 
+                <div class="col-lg-3 col-sm-6">
+                    <div class="icon-box-style-03 text-center margin-bottom-30 margin-top-50">
+                        <div class="memeber-img">
+                            <img src="/img/manjakos/{{$bordi['collections']['image']}}" alt="">
+                            <div class="member-social-style-1">
+                                <ul>
+                                    <li><a href="#"><i class="fa fa-share-alt"></i></a></li>
+                                </ul>
+                            </div>
+                            
+                        </div>
+                        <div class="sb-content">
+                            <h4 class="title">{{$bordi['collections']['title']['en']}}</h4>
+                            <p>{{$bordi['collections']['role']['en']}}</p>
+                        </div>
+                    </div>
+                </div>
+                @endforeach
+           
+            </div>
+        </div>
+    </div>
+    <!-- team area end  -->
+
+    <!-- stories area start -->
+    <div class="stories-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="stories-thumb mr-4">
+                        <img src="img/manjakos/<%includes.global.one[0]['alternativa_ne_kuvend_info']['collections']['image']%>" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-8 align-self-center">
+                    <div class="content-box-style-06">
+                        <p class="section-subtitle"><%includes.global.one[0]['alternativa_ne_kuvend_info']['collections']['above_title']['en']%></p>
+                        <h2 class="title"><%includes.global.one[0]['alternativa_ne_kuvend_info']['collections']['title']['en']%></h2>
+                        <p class="para"><%includes.global.one[0]['alternativa_ne_kuvend_info']['collections']['description']['en']%>/p>
+                        <div class="row margin-top-50">
+                            <div class="col-md-4">
+                                <ul class="nav nav-tabs">
+                                    <?php $index = 0; ?>
+                                    
+                                    
+
+                                    @foreach ($many[3]["alternativa_ne_kuvend"] as $slide) 
+                                    <?php $index++; ?>
+                                    <li><a class="<?php if($index==1) { ?> active <?php } ?>" data-toggle="tab" href="#menu{{$index}}">{{$slide['collections']['title']['en']}}</a></li>
+                                    @endforeach
+
+                                </ul>
+                            </div>
+                            <div class="col-md-8">
+                                <div class="tab-content">
+                                    
+                                      <?php $index = 0; ?>
+                                   @foreach ($many[3]["alternativa_ne_kuvend"] as $slide) 
+
+                                   <?php $index++; ?>
+                                   
+                                    <div id="menu{{$index}}" class="tab-pane fade <?php if($index == 1) { ?> in active show <?php } ?> ">
+                                        <h3 class="title margin-bottom-20">{{$slide['collections']['title']['en']}}</h3>
+                                        <p>{{$slide['collections']['description']['en']}}</p>
+                                        <iframe style="max-width:300px;" 
+src="https://www.youtube.com/embed/{{$slide['collections']['video_url']['en']}}">
+</iframe>
+                                    </div>
+                                    @endforeach
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- stories area end -->
+
+    <!-- blog area Start -->
+    <div class="home-news-area padding-top-115">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-12">
+                    <div class="text-center padding-bottom-55">
+                        <h2 class="section-title"><%includes.global.one[0]['heading_info_blog']['collections']['tiel']['en']%></h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                
+                <div class="col-lg-4" ng-repeat="blog in includes.global.many[0]['blog_posts']">
+                    <div class="news-item-style-03">
+                        <div class="thumb">
+                            <img src="img/manjakos/<%blog['collections']['image']%>" alt="news">
+                            <div class="small-thumb">
+                                <img src="img/manjakos/<%blog['collections']['image']%>" alt="small thumb">
+                            </div>
+                        </div>
+                        <div class="content">
+                            <!--<p class="subtitle">Politics</p>-->
+                            <h4 class="title"><a href="/blog/<%blog['id']%>/<%blog['slugable']['en']%>"><%blog['collections']['title']['en']%></a></h4>
+                            <ul class="blog-meta d-flex flex-column flex-lg-row">
+                                <li><a href="#"><%blog['created_at']%></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <!-- blog area End -->
+
+    <!-- party-box-area start -->
+    <div class="party-box-area padding-top-120">
+        <div class="container">
+            <div class="col-lg-12 party-box-wrapper d-flex flex-lg-row flex-column justify-content-lg-between justify-content-center text-lg-left text-center">
+                <div class="party-box-content">
+                    <h4>{!!$one['behu_vullnetar']['collections']['title']['en']!!}</h4>
+                    <p>{!!$one['behu_vullnetar']['collections']['description']['en']!!}</p>
+                </div>
+                <div class="btn-wrapper align-self-center">
+                    <a class="btn btn-custom-primary" href="{!!$one['behu_vullnetar']['collections']['button_link']['en']!!}">{!!$one['behu_vullnetar']['collections']['button_text']['en']!!}</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- party-box-area end -->
+
+  
+
+@endsection

@@ -1,0 +1,88 @@
+/*Only in desktop*/
+@media only screen and (min-width: 1000px) {
+    .desktop-d-n {
+      display: none;
+    }
+}
+
+
+/*Only on Mobile*/
+@media only screen and (max-width: 1000px) {
+    .mobile-d-n {
+   		display: none;
+	  }	
+	  body {
+		  overflow-x: hidden !important;
+	  }
+	  .background-img {
+		  display: block;
+		  padding-top: 20vh;
+	  }
+	  .intro-section__content {
+		  display: block;
+	  }
+	  .intro-section__welcome p {
+		  width: 100%;
+		  font-size: 16px;
+	  }
+	  .activitites_editable, .products_section {
+		padding: 4% 4%;
+	}	
+	.owl-carousel .owl-item img {
+		display: block;
+		width: 100%;
+		height: 40vh;
+		object-fit: cover;
+	}
+	.pdf_list {
+		display: block;
+		width: 100%;
+		justify-content: flex-end;
+	}
+	.download_box {
+		width: 70%;
+		margin: 47px auto;
+	}
+	.partners_section {
+		padding: 10% 0px;
+	}
+	.partner_holder {
+		margin: 15px 7px;
+		padding: 5px 10px 0;
+		background: #fff;
+	}
+	.footer {		
+		text-align: left !important;
+		padding: 20px;
+		float: left !important;
+	}
+	.btn-orange {
+		float: left;
+	}
+	.management_sales .info_holder {
+		width: 100%;
+	}
+	.contacts-section {
+		padding: 10% 0px;
+	}
+	.footer__menu-bar li {
+		float: left;
+		padding: 0 4px;
+	}
+	.about-section {
+		background: #21221F;
+		color: #fff;
+		padding: 20% 0;
+	}
+	.intro-section__welcome h2 {
+		color: #fff;
+		font-weight: 700;
+		font-size: 60px;
+	}
+}
+	
+.scrolled {
+    background: #21221F !important;
+	padding-top: 15px !important;
+	transition: ease all 0.3s;
+}

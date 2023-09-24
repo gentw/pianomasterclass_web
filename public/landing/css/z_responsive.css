@@ -1,0 +1,120 @@
+/*Only in desktop*/
+@media only screen and (min-width: 1000px) {
+    .desktop-d-n {
+      display: none ;
+    }
+}
+
+
+/*Only on Mobile*/
+@media only screen and (max-width: 1000px) {
+    .mobile-d-n { 
+        display: none !important;
+    }
+    .contact_section_top_b {
+        display: flex;
+        margin-top: 20px;
+    }
+    .contact_section_top_b a {
+        width: 48%;
+    }
+    .contact_section_top_b i {
+        display: none !important;
+    }
+    .top_main_sction {
+        padding: 7vh 0 0;
+    }
+    .contact_section_top_b button {
+        width: 98%;
+    }
+    .vertical-text {
+        display: none;
+    }
+    #home_cover .col-md-6 {
+        text-align: center;
+    }
+    .leadrbt {
+        display: none;
+    }
+    .wrap {
+        height: 160vh;
+        position: relative;
+        overflow: hidden;
+    }
+    .text_left_top {
+        width: 100%;
+        text-align: center;
+    }
+    .top_main_sction h3 {
+        font-size: 35px;
+        margin-top: 20%;
+        text-align: center;
+    }
+
+    footer {
+        text-align: left;
+        /* padding-left: 10px; */
+        overflow: hidden;
+    }
+    
+    footer h5 {
+        margin-top: 30px;
+        margin-bottom: 4px;
+    }
+    .navigation_top {
+        position: absolute;
+        width: 100%;
+        padding: 5vh 20px;
+        height: 97vh;
+    }
+
+    .first_section  {
+        padding-top: 10vh;
+        /* background: #191727; */
+    }
+    
+    .first_section h2 {
+        font-size: 40px;
+    }
+    .card_glass {
+        width: 90%;
+        margin: 10px auto;
+    }
+    .red_cards_ {
+        width: 100%;
+    }
+    body {
+        overflow-x: hidden !important;
+    }
+    .off_ten_red {  
+        text-align: center !important;
+    }
+    .off_ten_red h6 {
+        text-align: center;
+    }
+    .off_ten_red i {
+        display: none;
+    }
+    html {
+        overflow-x: hidden !important;
+    }
+    .logo_section_1 img {
+        width: 50%;
+    }
+    .member_card {
+        margin-top: 10px;
+    }
+    .membership_section {
+        background: #212529;
+    }
+    .footer_all_pages {
+        background: #020a19;
+        width: 100%;
+        color: #fff;
+        padding: 15% 10px;
+        text-align: center;
+    }
+    .footer_all_pages .hr_default {
+        margin: 10px auto;
+    }
+}

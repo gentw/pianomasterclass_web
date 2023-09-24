@@ -1,0 +1,144 @@
+.footer {
+	width: 100%;
+	background: $mainColor;
+	padding-top: 3%;
+	padding-bottom: 3%;
+	position: relative;
+	color: #fff;
+
+	.text-part {
+		display: flex;
+		flex-direction: column;
+		color: #b8b2c2;
+
+		// &:nth-child(1) {
+		// 	@media (max-width: $middleBreakpoint) {
+		// 		display: none;
+		// 	}
+		// }
+
+		&:nth-child(2) {
+		    box-sizing: border-box;
+    		padding-left: 10%;
+
+			@media (max-width: $middleBreakpoint) {
+				// display: none;
+			}
+		}
+
+		h3 {
+			color: #fff;
+			font-family: $poppinsRegular;
+		}
+
+		.logo {
+			width: 40%;
+			display: block;
+		}		
+
+		.line {
+		    width: 30%;
+		    height: 2px;
+		    background: #ddd;
+		    position: relative;
+		    float: left;
+		}
+
+		p {
+		    padding-top: 10px;
+   			font-size: 14px;
+   			font-family: $poppinsLight;
+   			color: #fff;
+   			opacity: 0.65;
+		}
+
+		ul {
+		    padding-left: 0px;
+		    padding-top: 5px;
+		    list-style-type: none;
+
+		    li {
+	    	    text-decoration: none;
+			    padding-top: 5px;
+			    padding-bottom: 5px;
+			    cursor: pointer;
+			    position: relative;
+
+			    a {
+				    color: #fff;
+				    font-family: $poppinsLight;
+				    opacity: 0.65;
+
+				    &:hover {
+				    	text-decoration: none;
+				    }
+			    }
+
+			    &:after {
+			    	content: '';
+			    	width: 0%;
+			    	height: 2px;
+			    	background: #fff;
+			    	position: absolute;
+			    	left: 0px;
+			    	bottom: 0;
+		    	  	transition: all 0.2s ease-in;
+			    }
+
+			    &:hover {
+			    	color: #fff;
+
+			    	&:after {
+			    		content: '';
+			    		width: 15%;
+			    	}
+			    }
+		    }
+		}
+
+		.icon__holder {
+			display: flex;
+			justify-content: flex-end;
+			font-size: 22px;
+			color: #fff;
+			margin-top: 20px;
+
+			@media (max-width: $middleBreakpoint) {
+				justify-content: center;
+				padding-top: 5%;
+				padding-bottom: 5%;
+				margin-top: 0;
+			}
+
+			i {
+				display: block;
+			    padding-left: 20px;
+			    float: left;
+			    padding-right: 20px;
+			}
+		}
+
+		.copyright-text {
+		    display: block;
+		    float: right;
+		    text-align: right;
+		    padding-right: 0%;
+		    padding-top: 10%;
+		    color: #fff;
+		    font-size: 12px;
+
+		    a {
+		    	color: #fff;
+		    	cursor: pointer;
+		    }
+
+		    @media (max-width: $middleBreakpoint) {
+		    	display: none;
+		    }
+		}
+	}
+
+	.footer__about {
+		width: 70%;
+	}
+}

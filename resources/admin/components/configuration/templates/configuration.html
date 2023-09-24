@@ -1,0 +1,30 @@
+<div class="container layout__content">
+	<ul class="nav nav-tabs configuration__tabs">
+		<div class="col-md-12 no__padding">
+			<a href="#1" data-toggle="tab" class="link__button" v-on:click="fetchTab('languages');">Language</a>
+			<a href="#2" data-toggle="tab" class="link__button" v-on:click="fetchTab('pages');">Pages</a>
+			<a href="#3" data-toggle="tab" class="link__button" v-on:click="fetchTab('pageTypes');">Page Types</a>
+			
+			<a href="#4" data-toggle="tab" class="link__button" v-on:click="fetchTab('pageTypesRelation');">Relationships</a>
+		</div>
+	</ul>
+	<!-- CONTENT -->
+	<div class="col-md-12 no__padding margin-top-10 tab-content tab-content--full_width">
+			<!-- ADD LANGUAGE -->
+			<div class="card__table tab-pane active" id="1">
+				<language-component v-if="tab == 'languages'"></language-component>
+			</div>
+			<!-- ADD PAGE -->
+			<div class="card__table tab-pane" id="2">
+				<pages-component v-if="tab == 'pages'"></pages-component>
+			</div>
+			<!-- PAGE TYPES -->
+			<div class="card__table tab-pane" id="3">
+				<page-types-component  v-if="tab == 'pageTypes'"></page-types-component>
+			</div>
+
+			<div class="card__table tab-pane" id="4">
+				<page-types-relation-component  v-if="tab == 'pageTypesRelation'"></page-types-relation-component>
+			</div>
+	</div>
+</div>

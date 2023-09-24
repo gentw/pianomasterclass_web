@@ -1,0 +1,116 @@
+.clients__section {
+	.first__section {
+		h1 {
+			font-family: $poppinsRegular;
+		}
+
+		.information__session {
+			font-family: $segoe;
+			font-size: 16px;
+			color: $block_title;
+			opacity: 0.7;
+		}
+
+		.clients__logos {
+		    margin-top: 3%;
+		    display: flex;
+		    flex-wrap: wrap;
+		    align-items: center;
+
+			.card {
+				position: relative;
+				padding-top: 3%;
+				padding-bottom: 3%;
+
+				img {
+				    display: block;
+				    width: 80%;
+				    filter: grayscale(100%);
+				    opacity: 0.4;
+				    transition: all 0.2s $firstBezier;
+
+				    @media (max-width: $tabletBreakpoint) {
+				    	margin: 0 auto;
+				    }
+			    }
+
+			    .tooltip__clients {
+					background: #fff;
+					color: #fff;
+					display: block;
+					left: -20px;
+					z-index: -99;
+					opacity: 0;
+					padding: 20px;
+					position: absolute;
+					width: 100%;
+					transform: translateY(10px);
+					transition: all .25s ease-out;
+					box-shadow: $mainShadow;
+			    	box-sizing: border-box;
+				    padding-left: 25px;
+				    padding-right: 25px;
+
+				    @media (max-width: $tabletBreakpoint) {
+				    	left: 20px;
+				    	width: 90%;
+				    }
+
+					p {
+						color: $block_title;
+						opacity: 0.7;
+					    font-size: 12px;
+					    font-family: $segoe;
+					}
+
+					h3 {
+						color: $block_title;
+						font-size: 18px;
+						font-family: $poppinsRegular;
+					}
+
+					.blue__button {
+					    font-size: 12px;
+					}
+
+					&:before {
+						top: -30px;
+						content: "";
+						display: block;
+						height: 50px;
+						left: 0;
+						position: absolute;
+						width: 100%;
+						// background: black;
+					}
+
+					&:after {
+						border-left: solid transparent 10px;
+						border-right: solid transparent 10px;
+						border-top: solid #fff 10px;
+						bottom: 100%;
+						content: " ";
+						height: 0;
+						left: 60%;
+						position: absolute;
+						width: 0;
+						transform: rotate(180deg);
+					}
+			    }
+
+			    &:hover {
+
+			    	img {
+				    	filter: none;
+				    	opacity: 1;		    		
+			    	}
+
+			    	.tooltip__clients {
+			    		opacity: 1;
+			    		z-index: 2;
+			    	}
+			    }
+			}
+		}
+	}
+}

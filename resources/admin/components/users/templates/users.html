@@ -1,0 +1,53 @@
+<div>
+
+        <!--  -->
+    <a class="default__link custom--link" data-toggle="modal" data-target="#myModal">
+        Add User    
+    </a>
+
+    <div class="card__table">
+        <div class="table__cell" v-for="user in users">
+            <div class="col-md-9 table__td flex--display">
+                <label>User:</label>
+                <p>{{ user.email }}</p>
+            </div>
+            <div class="col-md-3 table__td flex--display justify--end">
+                <a href="javascript:void(0)" class="table__actions" v-on:click="findUser(user)" data-toggle="modal" data-target="#myModal"><i class="fa fa-pencil"></i></a>
+                <a href="javascript:void(0)" class="table__actions" v-on:click="deleteUser(user)"><i class="fa fa-trash"></i></a>
+            </div>
+        </div>
+    </div>
+
+    
+
+    <!-- MODALS -->
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog">
+
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Add User</h4>
+                </div>
+                <div class="modal-body layout__holder layout--auto-height">
+                    <div class="layout__form">
+                        <div class="layout__input col-md-12">
+                            <label>Email</label>
+                            <input type="text" v-model="user.email">
+                        </div>
+                        <div class="layout__input col-md-12">
+                            <label>Password</label>
+                            <input type="password" v-model="user.password">
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="visit__website save__button cancel relative--position" data-dismiss="modal">Close</button>
+                    <button class="visit__website save__button relative--position" v-on:click="createUser(user)">Save</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

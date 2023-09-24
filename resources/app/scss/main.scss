@@ -1,0 +1,73 @@
+// Breakpoints
+$mobileBreakpoint: 480px;
+$tabletBreakpoint: 768px;
+$middleBreakpoint: 991px;
+$computerBreakpoint: 1024px;
+$largeScreenBreakpoint: 1200px;
+
+@import 'components/fonts';
+@import 'components/variables';
+@import 'components/common';
+@import 'components/header';
+@import 'components/footer';
+
+@import 'pages/home';
+@import 'pages/studies';
+@import 'pages/clients';
+@import 'pages/about';
+
+
+html, body {
+	margin: 0;
+	padding: 0;
+	position: relative;
+	overflow-x: hidden;
+}
+
+.page {
+	width: 100%;
+	height: auto;
+	float: left;
+}
+
+
+* {
+	outline: none;
+	-webkit-font-smoothing: antialiased;
+	-webkit-overflow-scrolling: touch;
+}
+
+.no__padding {
+	padding: 0;
+}
+
+.default__section {
+	padding-top: 5%;
+	padding-bottom: 5%;
+}
+
+.no__padding-left {
+	padding-left: 0;
+}
+
+.no__margin {
+	margin: 0;
+}
+
+h1 {
+	@media (max-width: $tabletBreakpoint) {
+		font-size: 30px;
+	}
+}
+
+.rellax {
+	@media (max-width: $tabletBreakpoint) {
+		transform: translate3d(0, 0, 0) !important;
+	}
+}
+
+.font-14 {
+	p {
+		font-size: 14px !important;
+	}
+}

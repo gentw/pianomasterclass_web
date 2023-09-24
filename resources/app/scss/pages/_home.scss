@@ -1,0 +1,207 @@
+.home {
+	.first__section {
+		height: 100vh;
+		width: 100%;
+		overflow-x: hidden;
+
+		@media (max-width: $tabletBreakpoint) {
+			height: 700px;
+		}
+
+		.left--part {
+			width: 45%;
+			height: 100%;
+			float: left;
+			box-sizing: border-box;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+			@media (max-width: $tabletBreakpoint) {
+		 		width: 100%;
+    			height: 50%;
+    			padding-left: 30px;
+    			padding-right: 30px;
+    			position: relative;
+    			z-index: 3;
+			}
+
+			.text__block {
+				width: 75%;
+
+				@media (max-width: $tabletBreakpoint) { 
+					width: 100%;
+				}
+			}
+		}
+
+		.right--part {
+			width: 55%;
+			height: 100%;
+			float: left;
+			background: $lightGrey;
+			transform: skewX(-10deg) translateX(20%);
+
+			@media (max-width: $tabletBreakpoint) {
+				background: #fff;
+				transform: none;
+		    	width: 100%;
+    			height: 50%;
+
+			}
+
+			.device__image {
+			    display: block;
+			    width: 70%;
+			    position: relative;
+			    // top: 50%;
+			    // transform: translate(0%, -50%);
+			    // left: -25%;
+
+			    @media (max-width: $tabletBreakpoint) { 
+			    	display: block;
+			    	width: 55%;
+			    	// height: 80%;
+			    	left: auto;
+			    	transform: none;
+			    	top: auto;
+		    	    margin: 0 auto;
+		    	    position: relative;
+    				z-index: 3;
+    				// display: none;
+			    }
+
+			    @media (max-width: $mobileBreakpoint) {
+			    	width: 80%;
+			    }
+			}
+		}
+
+		.decorative__title {
+		    color: #fff;
+		    position: absolute;
+		    display: block;
+		    right: -180px;
+		    font-family: PoppinsBold;
+		    text-transform: uppercase;
+		    font-size: 100pt;
+		    transform: rotate(-90deg) translateX(0%);
+		    top: 25%;
+		    opacity: 0.3;
+
+		    @media (max-width: $tabletBreakpoint) {
+		    	display: none;
+		    }
+		}
+	}
+
+	.second__section {
+		.case__studies-list {
+		    list-style: none;
+		    float: left;
+		    width: 100%;
+		    padding: 0;
+		    margin: 0;
+		    border-top: 1px solid $mainColor;
+
+		    a {
+		    	color: $mainColor;
+
+		    	&:hover {
+		    		text-decoration: none;
+		    	}
+		    }
+
+		    li {
+		    	background: #fff;
+			    box-sizing: border-box;
+		        padding-left: 5.5%;
+			    padding-top: 2%;
+			    padding-bottom: 2%;
+			    color: $mainColor;
+			    font-family: $poppinsBold;
+		        font-size: 18px;
+    			text-transform: uppercase;
+    			letter-spacing: 1px;
+    			border-right: 1px solid $mainColor;
+    			transition: all 0.2s ease-in;
+
+    			@media (max-width: $tabletBreakpoint) {
+				    padding-top: 5%;
+				    padding-bottom: 5%;
+				    border-top: 1px solid;
+				    border-bottom: 1px solid;
+				    border-left: none;
+				    border-right: none;
+    			}
+
+    			&.active {
+    				background: $mainColor;
+
+    				span {
+    					color: #fff;
+    					opacity: 0.6;
+    				}
+
+    				a {
+    					color: #fff;
+    				}
+    			}
+
+    			span {
+				    display: block;
+				    width: 100%;
+				    font-size: 12px;
+				    font-family: $poppinsRegular;
+				    color: $block_text;
+    			}
+		    }
+		}
+
+		.tab-content {
+			float: left;
+
+			.tab-pane {
+				background: url('../img/keyboard.png');
+				background-size: cover;
+				background-repeat: no-repeat;
+			    box-sizing: border-box;
+			    background-position: center;
+			    padding-top: 5%;
+			    padding-bottom: 5%;
+		        background-repeat: no-repeat;
+
+			    &:nth-child(2) {
+			    	background: url('../img/medical2.jpg');
+			    }
+
+			    &:nth-child(3) {
+			    	background: url('../img/studies.png');
+			    }
+
+			    .text__block {
+			    	@media (max-width: $tabletBreakpoint) {
+		    		    width: 100%;
+					    padding-top: 5%;
+					    padding-bottom: 5%;
+			    	}
+			    }
+
+			    .container {
+			    	z-index: 1;
+			    	position: relative;
+			    }
+			
+			    &:after {
+			    	content: '';
+			    	width: 100%;
+			    	height: 100%;
+			    	position: absolute;
+			    	background: rgba(0, 0, 0, 0.5);
+			    	top:0;
+			    	left:0;
+			    }
+			}
+		}
+	}
+}

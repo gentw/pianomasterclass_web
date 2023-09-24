@@ -1,0 +1,156 @@
+<div>
+	<section class="home" v-if="slug == 'news'">
+
+			<section class="news_innerpage_cover" v-bind:style="{ 'background-image': 'url(/img/manjakos/' + content[0].collections.image + ')' }"></section>
+
+			<!-- AD -->
+			<div class="container">
+				<div class="col-md-12">
+					<div class="top_add_second_s_news">
+						<img src="/img/banner-728-x-90-gif.gif">
+					</div>
+				</div>
+			</div>
+			<section class="news_panels_big_inn">
+				<div class="container">
+					<div class="row" v-if="content[0]">
+						<div class="col-md-12">
+							<div class="news_big_pannel_left box_shadow_default">
+								<h2 class="title_inner_big_news">{{ content[0].collections.title[lang] }}</h2>
+								<div class="desc" v-html="content[0].collections.description[lang]"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+	</section>
+	<!-- EVENTS -->
+	<section class="home" v-if="slug == 'event'">
+
+		<section class="news_panels_big_inn">
+			<div class="container">
+				<div class="row" v-if="content[0]">
+					<div class="col-md-9">
+						<div class="news_big_pannel_left box_shadow_default">
+							<h2 class="title_inner_big_news">{{ content[0].collections.title[lang] }}</h2>
+							<div v-html="content[0].collections.description[lang]"></div>
+						</div>
+						<section class="gallery_section_innerpage">
+							<div class="container-fluid">
+								<div class="imageGallery1">
+									<div class="row" v-if="content[0].collections">
+									<div class="col-md-3 col-6 col-sm-6 small_padding-lr image_gallery_body" v-for="gallery in content[0].collections.gallery">
+								    	<a :href="'/img/manjakos/' + gallery.image" title="Caption for gallery item 1"><img :src="'/img/manjakos/' + gallery.image" /></a>
+								    </div>
+								</div>
+							</div>
+						</div>
+					</section>
+				</div>
+				<othereventsright-component :globalReq="globalRequest"></othereventsright-component>
+				</div>
+
+					<!--<div class="imageGallery1">-->
+						<!--<section class="container-fluid">-->
+							<!--<div class="row">-->
+								<!--<div class="col-md-3 col-6 col-sm-6 no_padding image_gallery_body">-->
+							    	<!--<a href="/img/Group 184.png"><img src="/img/Group 184.png"/></a>-->
+							    <!--</div>-->
+								<!--<div class="col-md-3 col-6 col-sm-6 no_padding image_gallery_body">-->
+							    	<!--<a href="/img/Group 184.png"><img src="/img/Group 184.png"/></a>-->
+							    <!--</div>-->
+
+							<!--</div>-->
+						<!--</section>-->
+					<!--</div>-->
+			</div>
+		</section>
+	</section>
+
+	<section class="home" v-if="slug == 'block-hub'">
+
+		<!-- Company Details Innerpage -->
+		<section class="company_detail_innerpage">
+			<div class="container-fluid">
+				<div class="row" v-if="content[0]">
+					<div class="col-md-3">
+						<div class="card_for_c_details box_shadow_default">
+							<h2>Company Details</h2>
+
+							<label class="card_details_title">Industry</label>
+							<p class="card_details_inforamtion">{{ content[0].collections.industry[lang] }}</p>
+
+
+							<label class="card_details_title">Address</label>
+							<p class="card_details_inforamtion" v-html="content[0].collections.address[lang]"></p>
+
+							<label class="card_details_title">Contact Number</label>
+							<p class="card_details_inforamtion">{{ content[0].collections.contact[lang] }}</p>
+
+							<label class="card_details_title">Email</label>
+							<p class="card_details_inforamtion">{{ content[0].collections.email[lang] }}</p>
+
+							<label class="card_details_title">Website</label>
+							<a href="www.stormtoken.com">{{ content[0].collections.website[lang] }}</a>
+
+
+							<label class="card_details_title">SOCIAL MEDIA</label>
+							<p class="social_media_button_detail">
+								<a href="https://www.facebook.com/stormtoken/"><button><i class="fa fa-facebook" aria-hidden="true"></i></button></a>
+								<a href="https://twitter.com/Storm_Token"><button><i class="fa fa-twitter" aria-hidden="true"></i></button></a>
+								<a href="https://www.youtube.com/channel/UCdNOWVQFT0RpHKE5y7qyHQQ/videos"><button><i class="fa fa-youtube" aria-hidden="true"></i></button></a>
+							</p>
+						</div>
+
+
+						<div class="card_for_c_details box_shadow_default second_card_details_c">
+							<h2>LATEST PROJECTS</h2>
+							<div class="row">
+								<div class="col-md-6 col-sm-6 col-6 small_padding-lr">
+									<button class="default_pink_btn">Lastest Project 1</button>
+								</div>
+								<div class="col-md-6 col-sm-6 col-6 small_padding-lr">
+									<button class="default_pink_btn">Latest Project 2</button>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-md-9">
+						<iframe width="100%" height="100%" :src="content[0].collections['youtube_link'][lang] + '?rel=0&amp;controls=0&amp;showinfo=0'" frameborder="0" allowfullscreen></iframe>
+					</div>
+
+					<!-- <div class="col-md-3">
+						<div class="card_for_c_details box_shadow_default second_card_details_c">
+							<h2>LATEST JOBS</h2>
+
+							<label class="card_details_title">TAX AND REGULATORY COMPLIANCE</label>
+							<p class="card_details_inforamtion">Rochester, New York</p>
+
+							<label class="card_details_title">GYM INSTRUCTOR & TRAINER</label>
+							<p class="card_details_inforamtion">Los Angeles, California</p>
+						</div>
+					</div> -->
+
+
+					<div class="col-md-9">
+						<div class="card_for_c_details main_details_for_comapny_card box_shadow_default second_card_details_c">
+							<div class="row">
+								<div class="col-md-9">
+									<h2>{{ content[0].collections.title[lang] }}</h2>
+								</div>
+								<div class="col-md-3">
+									<img :src="'/img/manjakos/' + content[0].collections.logo" style="width: 80%;">
+								</div>
+							</div>
+							<p v-html="content[0].collections.description[lang]"></p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+
+	</section>
+</div>
+

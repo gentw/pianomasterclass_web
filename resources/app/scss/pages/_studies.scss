@@ -1,0 +1,117 @@
+.case__studies {
+	.first__section {
+		.container {
+			position: relative;
+		}
+
+		.text__block {
+			p {
+				color: #000;
+			}
+		}
+
+		.background__text {
+			font-size: 200pt;
+    		opacity: .04;
+    		position: absolute;
+    		top: 12%;
+    		left: -110px;
+    		line-height: 150%;
+    		font-family: $cinzel;
+
+    		@media (max-width: $tabletBreakpoint) {
+    			display: none;
+    		}
+		}
+	}
+
+	.second__section {
+		&.testimonial__part {
+			background: url('../img/studies.png');
+			background-size: cover;
+			background-repeat: no-repeat;
+			position: relative;
+
+		    &:after {
+		    	content: '';
+		    	width: 100%;
+		    	height: 100%;
+		    	position: absolute;
+		    	background: rgba(0, 0, 0, 0.3);
+		    	top:0;
+		    	left:0;
+		    }
+		}
+
+		h1 {
+			color: #fff;
+			z-index: 1;
+			display: block;
+			position: relative;
+			font-family: $poppinsRegular;
+		}
+
+		.container__modified {
+			width: 80%;
+			margin: 0 auto;
+			// background: red;
+			height: auto;
+			overflow: hidden;
+			position: relative;
+			z-index: 1;
+			margin-top: 3%;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+
+			img {
+				display: block;
+				float: left;
+			}
+
+			.testimonial__card {
+			    padding-left: 10px;
+			    display: flex;
+			    align-items: center;
+
+			    @media (max-width: $tabletBreakpoint) {
+		    	    flex-direction: column;
+    				padding-top: 5%;
+    				padding-bottom: 5%;
+			    }
+
+				h5 {
+					font-size: 20px;
+					color: #fff;
+					font-family: $poppinsRegular;
+				}
+
+				.person__information {
+				    float: left;
+				    width: 65%;
+				    padding-left: 20px;
+
+    			    @media (max-width: $tabletBreakpoint) {
+    			    	width: 100%;
+		    	    	text-align: center;
+			    	}
+
+				    p {
+				    	color: #fff;
+				    	opacity: 0.7;
+				    }
+
+				    span {
+				    	font-family: $poppinsRegular;
+				    	color: $mainColor;
+				    	opacity: 1;
+				    }
+				}
+			}
+
+			.blue__button {
+				margin-top: 50px;
+			}
+		}
+	}
+}

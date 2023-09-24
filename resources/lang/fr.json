@@ -1,0 +1,61 @@
+{
+	"home_section1": {
+		"case_studies": "Études de Cas",
+		"request": "Datasheet"
+	},
+	"contact": "Contact",
+	"tab_section": {
+		"first": {
+			"title": "Études de Cas",
+			"sub_title": "Réseaux"
+		},
+		"second": {
+			"title": "Études de Cas",
+			"sub_title": "Médical"
+		},
+		"third": {
+			"title": "Études de Cas",
+			"sub_title": "Cinéma"		
+		}
+	},
+	"clients": {
+		"partners": "Partenaires Commerciaux et Techniques:",
+		"our_clients": "Nos Clients",
+		"under_title": "Cliquez sur un logo pour voir comment notre produit a aidé ces clients"
+	},
+	"about": {
+		"team": {
+			"managment": "L’Equipe de Direction"
+		}
+	},
+	"casestudy": {
+		"distribute": {
+			"title": "Voulez-vous distribuer notre produit?",
+			"description": "Si vous souhaitez distribuer notre produit ou parler d’un partenariat, contactez-nous au lien ci-dessous et on reviendra vers vous au plus vite possible."
+		}
+	},
+	"footer": {
+		"description": "Harbor c’est la sécurité et la fonctionnalité. Notre objectif est de protéger vos réseaux et votre infrastructure en toute transparence, permettant à vos applications métier de fonctionner sans interruption et à votre personnel de travailler dans un environnement familier et confortable.",
+		"about": "A Propos de Nous",
+		"links": "Liens Rapides"
+	},
+	"nav": {
+		"home": "Accueil",
+		"about": "À Propos de Nous",
+		"case studies": "Études de Cas",
+		"clients": "Clients & Partenaires",
+		"contact": "Contact"
+	},
+	"form": {
+		"name": "Nom",
+		"phone": "Numéro de téléphone",
+		"subject": "Sujet",
+		"industries": "Votre secteur d’activité",
+		"message": "Envoyer messagee"
+	},
+	"testimonials": "Testimoniaux",
+	"get_in_touch": "Nous contacter",
+	"headquarters": "Nos Locaux",
+	"sendMessage": "Envoyez-nous un message",
+	"readMore": "Lire la suite"
+}

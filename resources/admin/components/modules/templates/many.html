@@ -1,0 +1,111 @@
+<div>
+	<div class="container layout__content">
+		<!-- CONTENT -->
+		<div class="col-md-12 no__padding margin-top-10 tab-content tab-content--full_width">
+			<!-- SINGLE POSTS -->
+			<div class="card__table">
+				<div class="col-md-12">
+					<span class="entry__divider"></span>
+					
+					<!-- SINGLE POSTS -->
+					<div class="layout__holder layout--auto-height">
+						<div class="layout__form" v-for="field in fields">
+				            <div class="layout__input layout--modules col-md-12 no__padding-left ">
+								<label v-if="field.type != 'select'" class="layout__label">{{ field.label }}</label>
+								<input type="text" v-if="field.type == 'text'" v-model="form[field.name][lang]">
+								<!-- TEXTEDITOR -->
+						      	<ckeditor  v-if="field.type == 'editor'" v-model="form[field.name][lang]" :config="config"></ckeditor>
+						      	<!-- DATE -->
+						      	<datepicker v-if="field.type == 'date'" v-model="form[field.name]" name="uniquename"></datepicker>
+						      	<div v-if="field.type == 'select' && field.label.includes('(one)')">
+
+						      		<label class="layout__label">{{field.label}}:</label>
+							      	<select class="form-control" v-model="form[field.name]" v-for="(val, key) in relations" v-if="key == field.label.split(' ')[0]">
+							      		
+										    <option :value="v" v-for="(v,k) in val">{{v[lang]}}
+										    </option>
+										 
+									</select>
+						      	</div>
+						      	<div v-if="field.type == 'select' && field.label.includes('(multiple)')">
+
+						      		<label class="layout__label">{{field.label}}:</label>
+							      	<select multiple class="form-control" v-model="form[field.name]" v-for="(val, key) in relations" v-if="key == field.label.split(' ')[0]">
+							      		
+										    <option :value="v" v-for="(v,k) in val">{{v[lang]}}
+										    </option>
+										 
+									</select>
+						      	</div>
+						      	<div class="category-list" v-if="field.type == 'select' && categories.length != 0" >
+						      		<label class="layout__label">Category:</label>
+						      	<select class="form-control" v-model="form[field.name]">
+									    <option v-for="(val, key) in categories" :value="val.id">{{val.name.en}}
+									    </option>
+								</select>
+								</div>
+								
+								
+				            </div>
+				            <!-- FILE UPLOADER -->
+		            	  	<div v-if="field.type == 'file'" class="layout__input gallery--layout__input col-md-12 no__padding-left">
+				            	<file-uploader :slug="field.name" :uploaded="form[field.name]" v-on:drop-success="showSuccessImage"></file-uploader>
+			            	</div>
+			            	<!-- GALLERY -->
+		            	  	<div v-if="field.type == 'gallery'" class="layout__input gallery--layout__input col-md-12 no__padding-left">
+				            	<gallery-uploader :slug="field.name" :uploaded="form[field.name]" :type_id="field.page_type_id" :entity_id="entity.id" v-on:drop-success="showSuccess"></gallery-uploader>
+			            	</div>
+
+			            	<!-- <div v-if="categories.length !== 0 || field.type == 'select'">         		
+								<br><br>
+			            		<div class="form-group ">
+									  <label for="sel1">Select category:</label>
+									  <select class="form-control" v-model="form[field.name]">
+									    <option v-for="(val, key) in categories" v-bind="val.id">{{val.name.en}}
+									    </option>
+									  </select>
+								</div>
+			            	</div> -->
+			            	
+						</div>
+						<br><br>       		
+
+			            	
+			            
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="right__content">
+		<div class="right__navi">
+			<label></label>
+			<div class="rest__content">
+				<button class="save__content" v-on:click="storeDatas(form, typeSlug);">
+					<span v-if="isSaving == false">Save</span>
+					<i v-if="isSaving" class="fa fa-circle-o-notch fa-spin"></i>
+				</button>
+			</div>
+		</div>
+		<div class="right__navi">
+			<label>Languages</label>
+			<div class="rest__content language__holder">
+				<a v-for="language in languages" v-bind:class="{active: lang == language.key}"  v-on:click="changeLanguage(language.key)">{{ language.key }}</a>
+			</div>
+		</div>
+		<div class="right__navi" v-if="entity.slugable">
+			<label>Slug</label>
+			<div class="rest__content">
+				<p class="slug__info">{{ entity.slugable[lang] }}</p>
+			</div>
+		</div>
+		<div class="right__navi"" v-if="typeSlug !== undefined">
+			<label>Type</label>
+			<div class="rest__content">
+				<p class="slug__info">{{ typeSlug }}</p>
+			</div>
+		</div>
+	</div>
+</div>
+

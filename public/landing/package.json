@@ -1,0 +1,25 @@
+{
+  "name": "main_template",
+  "version": "1.0.0",
+  "description": "Tempalte for Websites ",
+  "main": "index.js",
+  "scripts": {
+    "test": "\u001b[A\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[Capp.js"
+  },
+  "author": "me",
+  "license": "ISC",
+  "devDependencies": {
+    "grunt": "^1.0.3",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-cssmin": "^2.2.1",
+    "grunt-contrib-uglify": "^3.3.0",
+    "grunt-contrib-watch": "^1.0.1",
+    "grunt-express": "^1.4.1",
+    "grunt-npm-install-all": "^0.1.0"
+  },
+  "dependencies": {
+    "bower": "^1.8.2",
+    "grunt-contrib-htmlmin": "^2.4.0",
+    "grunt-contrib-mincss": "^0.3.2"
+  }
+}

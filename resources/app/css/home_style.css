@@ -1,0 +1,367 @@
+html {
+  scroll-behavior: smooth;
+}
+
+.btn-transp {
+  width: 180px;
+  border: 1.5px solid #fff;
+  background-color: transparent;
+  font-size: 15px;
+  border-radius: 5px;
+  color: white !important;
+  margin-top: 10px;
+  padding: 12px;
+  transition: ease all 0.3s;
+}
+.btn-transp:hover {
+  opacity: 0.7;
+  transition: ease all 0.3s;
+}
+.intro-section {
+  height: 80vh;
+}
+.intro-section span {
+  color: #ec8351;
+}
+.background-img {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+.intro-section__content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.background-img {
+  background-image: linear-gradient(rgba(255, 0, 0, 0.007), #21221f),
+    url("../img/Group 151.jpg");
+  height: 80vh;
+  background-position: center;
+  background-size: cover;
+}
+.intro-section__welcome h2 {
+  color: white;
+  font-weight: bold;
+  font-size: 70px;
+  margin-bottom: 30px;
+}
+
+.intro-section__welcome p {
+  color: white;
+  font-size: 20px;
+  width: 50%;
+}
+.about-section {
+  background: #21221f;
+  color: white;
+  padding: 6% 0px;
+}
+.about-section h3 {
+  font-family: "Bai Jamjuree", sans-serif;
+  font-size: 50px;
+  color: #fff;
+  text-transform: capitalize;
+  font-weight: bold;
+}
+.about-section img {
+  width: 200px;
+}
+
+.our-activities-section {
+  padding: 4% 0px;
+}
+
+.our-activities-section__grid {
+  display: flex;
+}
+
+.our-activities-section__grid .column {
+  width: 25%;
+  padding: 10px;
+}
+.activitites_editable {
+  padding: 4% 0px 1%;
+}
+.activitites_editable h2 {
+  font-weight: 700;
+  font-size: 40px;
+  /* margin-bottom: 30px; */
+}
+.activitites_editable p {
+  margin-bottom: 20px;
+}
+.activities_card_slide img {
+  transition: ease-in-out all 0.3s;
+  height: 300px !important;
+  object-fit: cover;
+}
+.activities_card_slide:hover img {
+  transform: translateY(-10px);
+  transition: ease-in-out all 0.3s;
+}
+.activities_card_slide:hover h6 {
+  color: #ec8351; 
+  transition: ease-in-out all 0.3s;
+}
+.activities_card_slide h6 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 20px;
+  transition: ease-in-out all 0.3s;
+  text-align: center;
+} 
+.activities_card_slide p {
+  width: 90%;
+}
+.activities_card_slide a {
+  color: #21221f;
+  text-decoration: none;
+}
+.products_section {
+  padding: 4% 0px;
+}
+.products_section h4 {
+  font-weight: 700;
+  font-size: 40px;
+}
+.products_section .row {
+  align-items: center;
+}
+.products_section h3 {
+  font-weight: bold;
+  font-size: 40px;
+  margin-bottom: 0px;
+}
+.products_section p {
+  font-size: 17px;
+}
+.products_section .btn-black {
+  background: #21221f;
+  color: white;
+  padding: 10px 25px;
+}
+.pdf_list {
+  display: flex;
+  width: 100%;
+  /* justify-content: flex-end; */
+}
+.download_box {
+  width: 48%;
+  margin: 30px 20px;
+}
+.download_box a:hover {
+  color: #ec8351;
+}
+.download_box a {
+  color: #21221f;
+  text-decoration: none;
+  font-family: "Bai Jamjuree", sans-serif;
+  font-weight: bold;
+}
+.download_box img {
+  border-radius: 10px;
+  width: 100%;
+}
+.dw {
+  margin-top: 10px;
+  display: flex;
+  /* justify-content: space-between; */
+  padding: 0px 5px;
+  color: #21221f !important;
+  width: 200px;
+}
+.dw a {
+  color: black;
+  font-family: "Bai Jamjuree", sans-serif;
+  font-weight: bold;;
+}
+.dw a:hover {
+  color: #ec8351;
+}
+.dw-icon {
+  background-image: url("../img/download-cloud.svg");
+  height: 25px;
+  width: 25px;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-left: 30px;
+}
+
+.partners_section {
+  padding: 4% 0px;
+  background-color: #f7f7f7;
+}
+.partners_section .row {
+  align-items: center;
+}
+.partners_section h3 {
+  font-size: 40px;
+  font-weight: bold;
+}
+.partners_section .col-md-9 {
+  display: flex;
+  justify-content: flex-end;
+}
+.partner_holder {
+  box-shadow: 0 8px 17px 2px rgba(0, 0, 0, 0.14),
+    0 3px 14px 2px rgba(0, 0, 0, 0.12), 0 5px 5px -3px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  margin: 0px 7px;
+  padding: 5px 10px 0px;
+  background: white;
+}
+.partner_holder:hover {
+  box-shadow: 0 8px 17px 2px rgba(0, 0, 0, 0.32),
+    0 3px 14px 2px rgba(0, 0, 0, 0.12), 0 5px 5px -3px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+.partner_holder a {
+  color: #21221f;
+}
+.partner_holder img {
+  width: 50%;
+  height: 40px;
+  object-fit: contain;
+}
+.management_sales {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.management_sales h3 {
+  width: 100%;
+  border-bottom: solid 2px #21221f;
+  padding-bottom: 10px;
+}
+
+.management_sales .info_holder {
+  width: 100%;
+}
+
+.management_sales h4 {
+  font-weight: bold;
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+.contacts-section {   
+  padding: 4% 0px;
+}
+.contacts-section p a {
+  text-decoration: none !important;
+  color: #ec8351 !important;
+  opacity: 0.7 !important;
+}
+.contacts-section p a:hover {
+  opacity: 1 !important;
+}
+.contacts-section h2 {
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+.footer {
+  background: #21221f;
+  color: white;
+  padding: 4% 0px;
+}
+.footer a {
+  color: #fff;
+}
+.footer ul {
+  list-style: none;
+  padding: 0px;
+}
+.footer .row {
+  justify-content: space-between;
+}
+
+.footer__menu-bar li {
+  float: left;
+  padding: 0px 10px;
+}
+.footer__contacts-info a:hover {
+  color: #ec8351;
+}
+.footer__contacts-info span {
+  line-height: 30px;
+  font-size: 15px;
+}
+.footer__contacts-info i {
+  width: 30px;
+}
+
+.footer img {
+  margin-bottom: 30px;
+}
+.btn-orange {
+  background: #ec8351;
+  float: right;
+  margin-top: 20px;
+  padding: 10px 20px;
+}
+
+.underline {
+  position: relative;
+}
+
+.underline:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  display: block;
+  margin-top: 5px;
+  right: 0;
+  background: #fff;
+  transition: width 0.2s ease;
+  -webkit-transition: width 0.2s ease;
+}
+.underline:hover:after {
+  width: 100%;
+  left: 0;
+  background: #fff;
+}
+.center {
+  text-align: center;
+}
+.peripheral_section {
+  padding: 4% 0px;
+}
+.peripheral_section .row {
+  justify-content: center;
+}
+.peripheral_section .row {
+	align-items: center;
+}
+.peripheral_section img {
+	width: 100%;
+}
+.peripheral_section .col-md-6 {
+  padding: 0px;
+}
+.peripheral_section .text_add {
+  padding: 30px;
+}
+.peripheral_section h3 {
+    font-weight: 700;
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.peripheral_section li {
+	font-size: 20px;
+}
+.peripheral_section ul {
+  list-style: none; /* Remove default bullets */
+  padding: 0px;
+}
+.peripheral_section ul li::before {
+  content: "\2022"; /* Add content: \2022 is the CSS Code/unicode for a bullet */
+  color: red; /* Change the color */
+  font-weight: bold; /* If you want it to be bold */
+  display: inline-block; /* Needed to add space between the bullet and the text */
+  width: 15px; /* Also needed for space (tweak if needed) */
+}
